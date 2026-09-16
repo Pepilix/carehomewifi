@@ -1,0 +1,17 @@
+/* CareHomeWiFi.com — print styles */
+@media print {
+  header.site, footer.site, .cookie-banner, .scroll-top, .skip-link,
+  .hero-ctas, .cta-band, #contact, .nav-toggle, .breadcrumb {
+    display: none !important;
+  }
+  body { background: #fff; color: #000; font-size: 12pt; }
+  a { color: #000; text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+  .wrap { max-width: 100%; padding: 0; }
+  .photo-frame { background: #eee !important; border: 1px solid #ccc; }
+  .photo-tag, .photo-chip { display: none; }
+  section { padding: 16pt 0; page-break-inside: avoid; }
+  h1, h2, h3 { page-break-after: avoid; color: #000; }
+  .technical { background: #fff !important; color: #000 !important; border: 1px solid #ccc; }
+  .technical .fbox, .technical .seg { color: #000; border-color: #999; }
+}
