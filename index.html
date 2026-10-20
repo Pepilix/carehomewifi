@@ -3,6 +3,12 @@ title: Care Home WiFi & Network Specialists | CareHomeWiFi.com
 description: "Specialist WiFi and network infrastructure for UK care homes: new-build developments, upgrades to existing homes and ongoing support. Part of Inspire AV."
 body_class: page-home
 ---
+{%- comment -%}
+  Homepage — six sections, each with one job:
+  1 Hero (positioning + pathways) · 2 Who we help · 3 Proven projects
+  4 What we deliver · 5 Connected care technology · 6 Contact
+  Detail lives on the dedicated pages; this page routes and proves.
+{%- endcomment -%}
 
 <!-- 1. HERO -->
 <section class="home-hero">
@@ -10,142 +16,64 @@ body_class: page-home
     <div>
       <p class="eyebrow">Care home WiFi &amp; networks · Part of Inspire Audio Visual</p>
       <h1>Specialist WiFi &amp; Network Infrastructure for UK Care Homes.</h1>
-      <p class="lead">From new-build developments to upgrades and ongoing support, we design and deliver reliable connectivity for the environments modern care depends on.</p>
+      <p class="lead">We design, install and support the networks that care systems, staff and residents rely on — for developers building new homes and operators running existing ones.</p>
       <div class="btn-row">
         <a class="btn btn--primary" href="{{ '/new-build-care-home-networks/' | relative_url }}">New-Build Projects</a>
         <a class="btn btn--secondary" href="{{ '/care-home-wifi-problems/' | relative_url }}">Improve an Existing Home</a>
       </div>
+      <p class="home-hero__more"><a class="text-link" href="{{ '/care-group-networks/' | relative_url }}">Running several homes? See our approach for care groups</a></p>
     </div>
     <div class="home-hero__media">
       <figure class="photo">
         <img src="{{ '/assets/img/case-lnt-exterior.jpg' | relative_url }}" width="1024" height="683" fetchpriority="high"
              alt="Bradshaw Lodge, a newly completed LNT Care Developments care home, on its opening day">
       </figure>
-      <p class="home-hero__badge"><strong>Bradshaw Lodge, LNT Care Developments</strong>66 bedrooms · 28 WiFi 7 access points · fibre backbone · live in one working day</p>
+      <p class="caption">Bradshaw Lodge, LNT Care Developments — one of the new-build homes on our standard network specification.</p>
     </div>
   </div>
 </section>
 
-<!-- VISITOR ROUTES -->
-<section class="routes-band" aria-label="Choose your route">
-  <div class="container">
-    {% include visitor-routes.html %}
-  </div>
-</section>
-
-<!-- 2. CREDIBILITY -->
-<section class="section--tight" aria-labelledby="experience-title">
-  <div class="container">
-    <h2 id="experience-title" class="visually-hidden">Our experience</h2>
-    <div class="stats reveal">
-      <div class="stat"><span class="stat__value">LNT</span><span class="stat__label">A standard network specification across LNT Care Developments' new-build homes</span></div>
-      <div class="stat"><span class="stat__value">1 day</span><span class="stat__label">for two engineers to bring a 66-bed new build fully online</span></div>
-      <div class="stat"><span class="stat__value">Phased</span><span class="stat__label">upgrades in occupied homes, planned around care routines</span></div>
-      <div class="stat"><span class="stat__value">UK-wide</span><span class="stat__label">projects, from our base at Thorp Arch near Wetherby</span></div>
-    </div>
-    <p class="muted" style="margin-top:var(--s-5); max-width:70ch;">We work with developers delivering care home programmes and with operators running homes day to day — so we understand how these buildings are designed, built and lived in, and what the technology inside them depends on.</p>
-  </div>
-</section>
-
-<!-- 3. TWO JOURNEYS -->
-<section class="section section--white" aria-labelledby="journeys-title">
+<!-- 2. WHO WE HELP -->
+<section class="section section--white" aria-labelledby="who-title">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">Where are you starting from?</p>
-      <h2 id="journeys-title">Two routes in. One specialist team.</h2>
+      <p class="eyebrow">Who we help</p>
+      <h2 id="who-title">Three starting points, one specialist team.</h2>
     </div>
-
-    <article class="journey reveal">
-      <div class="journey__media">
-        <figure class="photo"><img src="{{ '/assets/img/case-lnt-cinema-room.jpg' | relative_url }}" width="1024" height="683" loading="lazy" alt="Residents' cinema room at Bradshaw Lodge, a new-build care home"></figure>
-      </div>
-      <div>
-        <p class="eyebrow">New-build care homes</p>
-        <h3 class="h2-like" style="font-size:var(--fs-h2)">Designed into the project from the outset.</h3>
-        <p class="journey__audience">For developers, construction directors and main contractors.</p>
-        <p>We work with developers and construction teams to deliver network infrastructure designed into the project from the outset — specified early, coordinated with the other trades, and handed over tested and documented.</p>
-        <ul class="list-lined">
-          <li>Network specification and data point schedules at design stage</li>
-          <li>Coordination with M&amp;E consultants, electrical contractors and the incoming-line provider</li>
-          <li>Installation, commissioning and testing to the construction programme</li>
-          <li>A consistent specification you can repeat across every development</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn btn--primary" href="{{ '/contact/?type=new-build' | relative_url }}">Discuss a New-Build Project</a>
-          <a class="text-link" style="align-self:center" href="{{ '/new-build-care-home-networks/' | relative_url }}">How we work on new builds</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="journey journey--flip reveal">
-      <div class="journey__media">
-        <figure class="photo"><img src="{{ '/assets/img/hero-ap-install.jpg' | relative_url }}" width="1122" height="1402" loading="lazy" alt="Engineer fitting a ceiling-mounted wireless access point in a care home"></figure>
-      </div>
-      <div>
-        <p class="eyebrow">Existing care homes</p>
-        <h3 style="font-size:var(--fs-h2)">Find the real problem. Fix it properly.</h3>
-        <p class="journey__audience">For care home owners, managers and operations teams.</p>
-        <p>From unreliable WiFi to complete network upgrades, we identify the problem and deliver practical solutions while minimising disruption to residents and staff.</p>
-        <ul class="list-lined">
-          <li>An on-site survey and diagnosis before anything is recommended</li>
-          <li>Keep the equipment that works; replace only what's holding the network back</li>
-          <li>Work phased around residents, staff shifts and care routines</li>
-          <li>Separate, prioritised networks for care, staff, residents and guests</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn btn--primary" href="{{ '/contact/?type=existing' | relative_url }}">Request a WiFi Assessment</a>
-          <a class="text-link" style="align-self:center" href="{{ '/care-home-wifi-problems/' | relative_url }}">Help for existing homes</a>
-        </div>
-      </div>
-    </article>
-
-    <div class="journey journey--portfolio reveal" style="grid-template-columns:1fr auto; align-items:center;">
-      <div>
-        <p class="eyebrow">Care groups &amp; multi-site operators</p>
-        <h3>Running several homes?</h3>
-        <p class="muted" style="max-width:62ch">We help care groups bring their homes to a consistent standard — one network design, one approach to security and segmentation, and one team supporting the estate.</p>
-      </div>
-      <a class="btn btn--secondary" href="{{ '/care-group-networks/' | relative_url }}">Networks for care groups</a>
-    </div>
+    <ul class="audiences">
+      <li class="audience reveal">
+        <figure class="photo photo--landscape"><img src="{{ '/assets/img/case-lnt-cinema-room.jpg' | relative_url }}" width="1024" height="683" loading="lazy" alt="Residents' cinema room in a newly completed care home"></figure>
+        <p class="audience__who">Developers &amp; contractors</p>
+        <h3>Building a new care home</h3>
+        <p>Network infrastructure specified at design stage, coordinated with the other trades and delivered to your construction programme.</p>
+        <a class="text-link" href="{{ '/new-build-care-home-networks/' | relative_url }}">New-build networks</a>
+      </li>
+      <li class="audience reveal">
+        <figure class="photo photo--landscape"><img src="{{ '/assets/img/hero-ap-install.jpg' | relative_url }}" width="1122" height="1402" loading="lazy" alt="Engineer fitting a ceiling-mounted wireless access point"></figure>
+        <p class="audience__who">Owners &amp; managers</p>
+        <h3>Fixing WiFi in an existing home</h3>
+        <p>We survey and diagnose before recommending anything, keep what works, and phase the work around residents and staff.</p>
+        <a class="text-link" href="{{ '/care-home-wifi-problems/' | relative_url }}">Help for existing homes</a>
+      </li>
+      <li class="audience reveal">
+        <figure class="photo photo--landscape"><img src="{{ '/assets/img/case-roche-secondary.jpg' | relative_url }}" width="1329" height="886" loading="lazy" alt="One of several care homes upgraded as part of a multi-site programme"></figure>
+        <p class="audience__who">Care groups &amp; operators</p>
+        <h3>Standardising several homes</h3>
+        <p>One network standard, one approach to security and one support team across every home in your group.</p>
+        <a class="text-link" href="{{ '/care-group-networks/' | relative_url }}">Networks for care groups</a>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- 4. END-TO-END -->
-<section class="section" aria-labelledby="process-title">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">End-to-end capability</p>
-      <h2 id="process-title">One team responsible for the whole infrastructure journey.</h2>
-      <p>We don't hand over a drawing and walk away, or arrive on site with no context. The same team carries a project from specification to support — including the coordination with internet providers and other contractors that usually falls between the gaps.</p>
-    </div>
-    {% include delivery-timeline.html %}
-  </div>
-</section>
-
-<!-- 5. NETWORK ARCHITECTURE & CARE TECHNOLOGY -->
-<section class="section section--navy" aria-labelledby="tech-title">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Network architecture &amp; care technology</p>
-      <h2 id="tech-title">Connecting the technology modern care depends on.</h2>
-      <p>Care management tools, AI-assisted monitoring, staff devices, nurse call and building systems each place different demands on the network. Explore an example architecture to see how they fit together and what each one needs.</p>
-    </div>
-    {% include network-explorer.html %}
-    <div class="tech-footnote">
-      <p>We have experience supporting the connectivity for care technology including <strong>Sensio</strong> AI-assisted monitoring, which runs on the networks we install in LNT care homes, and <strong>Person Centred Software</strong> care records, alongside nurse-call, CCTV and building-system suppliers. We provide and support the network these systems run on; we don't supply, configure or take clinical responsibility for third-party care software, and naming a provider doesn't imply a formal partnership.</p>
-      <a class="text-link" href="{{ '/care-technology-integration/' | relative_url }}">Technology &amp; integration</a>
-    </div>
-  </div>
-</section>
-
-<!-- 6. PROJECTS -->
+<!-- 3. PROVEN PROJECTS -->
 <section class="section" aria-labelledby="projects-title">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">Projects</p>
-      <h2 id="projects-title">Recent work in new and existing care homes.</h2>
+      <p class="eyebrow">Proven projects</p>
+      <h2 id="projects-title">A repeatable new-build standard, and upgrades in occupied homes.</h2>
     </div>
-    {% include project-showcase.html %}
+    {% include project-showcase.html filters="off" %}
     <blockquote class="quote reveal" style="margin-top:var(--s-7); max-width:780px">
       <p>“Thanks to all the team for your work in getting this all completed again with minimal disruption to the site. It's much appreciated and all the homes have been very positive about CareHomeWiFi.”</p>
       <footer><strong>Patrick Roche</strong>Development Director, Roche Care Homes</footer>
@@ -153,36 +81,45 @@ body_class: page-home
   </div>
 </section>
 
-<!-- 7. SUPPORT -->
-<section class="section section--grey" aria-labelledby="support-title">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">After handover</p>
-      <h2 id="support-title">Our involvement doesn't have to end at handover.</h2>
-      <p class="lead">Networks change as homes fill up, devices are added and care technology evolves. We stay involved so problems are caught early and every home in an estate is supported the same way.</p>
-      <ul class="list-lined" style="margin-top:var(--s-5)">
-        <li>Remote monitoring of the core network and access points</li>
-        <li>Troubleshooting by engineers who know the building</li>
-        <li>Planned changes as devices and systems are added</li>
-        <li>Consistent configuration and documentation across multiple homes</li>
-      </ul>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="{{ '/managed-care-home-wifi/' | relative_url }}">Managed WiFi &amp; Support</a>
-      </div>
+<!-- 4. WHAT WE DELIVER -->
+<section class="section section--white" aria-labelledby="deliver-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What we deliver</p>
+      <h2 id="deliver-title">From specification to support, one team responsible.</h2>
+      <p>Including the coordination with internet providers, contractors and system suppliers that usually falls between scopes.</p>
     </div>
-    <figure class="photo photo--portrait reveal">
-      <img src="{{ '/assets/img/cabinet-rack-install.jpg' | relative_url }}" width="1050" height="1400" loading="lazy" alt="Patched and labelled network cabinet with switching, firewall and incoming fibre equipment">
-    </figure>
+    {% include delivery-timeline.html compact=true %}
+    <p class="section-links">
+      <a class="text-link" href="{{ '/services/' | relative_url }}#delivery">How each stage works</a>
+      <a class="text-link" href="{{ '/managed-care-home-wifi/' | relative_url }}">Managed WiFi &amp; support after handover</a>
+    </p>
   </div>
 </section>
 
-<!-- 8. CONTACT -->
+<!-- 5. CONNECTED CARE TECHNOLOGY -->
+<section class="section section--navy" aria-labelledby="tech-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Connected care technology</p>
+      <h2 id="tech-title">Why care homes need specialist network infrastructure.</h2>
+      <p>Care records, AI-assisted monitoring, nurse call and building systems each make different demands on one network. Select any part of this example to see where it fits.</p>
+    </div>
+    {% include network-explorer.html compact=true %}
+    <div class="tech-footnote">
+      <p>Systems we support include <strong>Sensio</strong> monitoring, used in LNT care homes on networks we install, and <strong>Person Centred Software</strong> care records. We provide the network; suppliers remain responsible for their systems.</p>
+      <a class="text-link" href="{{ '/care-technology-integration/' | relative_url }}#architecture">Explore the full network architecture</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CONTACT -->
 <section class="section" id="contact" aria-labelledby="contact-title">
   <div class="container split split--top">
     <div>
       <p class="eyebrow">Contact</p>
       <h2 id="contact-title">Tell us about your project or your home.</h2>
-      <p class="lead">A few lines is enough to start. We'll come back with sensible next steps — whether that's a call, a site visit or a specification review.</p>
+      <p class="lead">A few lines is enough. We reply the same working day with sensible next steps — usually a call, a site visit or a specification review.</p>
       <ul class="contact-list" style="margin-top:var(--s-6)">
         <li><span>Telephone</span><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></li>
         <li><span>Email</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>

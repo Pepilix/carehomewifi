@@ -1,8 +1,10 @@
 {%- comment -%}
   Interactive delivery timeline (ARIA tabs). Content lives in _data/delivery.yml.
   Without JavaScript all stages are shown one after another.
+  compact=true shows a one-line summary per stage (homepage); the full
+  activities and deliverables appear on the Services page.
 {%- endcomment -%}
-<div class="tl" data-tl>
+<div class="tl{% if include.compact %} tl--compact{% endif %}" data-tl>
   <div class="tl__track" role="tablist" aria-label="Project delivery stages">
     <span class="tl__rail" aria-hidden="true"><i class="tl__fill"></i></span>
     {% for s in site.data.delivery.stages %}
@@ -21,8 +23,13 @@
       <p class="tl__stage">Stage {{ forloop.index }} of {{ forloop.length }}</p>
       <h3>{{ s.name }}</h3>
       <p>{{ s.lead }}</p>
+      {% if include.compact %}
+      <p class="tl__outputs"><strong>Key outputs</strong>{{ s.outputs }}</p>
+      {% else %}
       <p class="tl__who"><strong>Who's involved</strong>{{ s.involved }}</p>
+      {% endif %}
     </div>
+    {% unless include.compact %}
     <div>
       <h4>What happens</h4>
       <ul class="list-lined">{% for a in s.activities %}<li>{{ a }}</li>{% endfor %}</ul>
@@ -31,6 +38,7 @@
       <h4>What you receive</h4>
       <ul class="list-lined">{% for d in s.deliverables %}<li>{{ d }}</li>{% endfor %}</ul>
     </div>
+    {% endunless %}
   </div>
   {% endfor %}
 </div>

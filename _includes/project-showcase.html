@@ -1,12 +1,13 @@
 {%- comment -%}
   Filterable project showcase. Reads _projects/*.md:
   filters: [new-build | existing | multi-site], highlights: [{label, value}], outcome
-  Usage: {% include project-showcase.html heading_level=3 %}
+  Usage: {% include project-showcase.html heading_level=3 filters="off" %}  (filters="off" hides the filter bar)
   Without JavaScript the filter buttons are hidden and every project is shown.
 {%- endcomment -%}
 {%- assign projects = site.projects | sort: "order" -%}
 {%- assign hl = include.heading_level | default: 3 -%}
 <div class="showcase" data-showcase data-initial="{{ include.filter | default: 'all' }}">
+  {% unless include.filters == "off" %}
   <div class="showcase__filters" role="group" aria-label="Filter projects" hidden>
     <button type="button" class="chip" data-filter="all" aria-pressed="true">All projects</button>
     <button type="button" class="chip" data-filter="new-build" aria-pressed="false">New-build developments</button>
@@ -14,6 +15,7 @@
     <button type="button" class="chip" data-filter="multi-site" aria-pressed="false">Multi-site programmes</button>
     <p class="showcase__count" role="status" aria-live="polite"></p>
   </div>
+  {% endunless %}
 
   <ul class="showcase__grid">
     {% for p in projects %}

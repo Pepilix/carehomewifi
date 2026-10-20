@@ -48,10 +48,15 @@ Roche Care Homes' existing WiFi was struggling to keep up. Inconsistent coverage
 - Staff training at handover
 - A 12-month on-site support warranty
 
-## Delivery
+## Delivery and constraints
 
-The homes were occupied throughout, so the work was rolled out in phases and planned around the care routine of each building rather than the other way round. Each phase was completed and tested before the next began.
+- **Occupied homes.** Residents and staff were in every building throughout, so work was phased and planned around each home's care routine rather than the other way round.
+- **One phase at a time.** Each phase was completed and tested before the next began.
+- **Existing infrastructure first.** Each home was surveyed before anything was specified, so the design reflected what was already there.
 
-## The result
+## Outcomes
 
-Reliable coverage across the homes for staff devices, residents and visitors, a network that can be seen and managed centrally, and a single point of contact for support. Roche's development director described the work as completed "with minimal disruption to the site".
+- 14 access points and 22 managed devices across the homes, all visible and managed centrally in the cloud.
+- Coverage across communal areas, private rooms and outdoor spaces for staff devices, residents and visitors.
+- Staff trained at handover, with a 12-month on-site support warranty and a single point of contact for support.
+- Completed, in the words of Roche's development director, "with minimal disruption to the site".

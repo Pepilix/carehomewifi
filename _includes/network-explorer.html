@@ -1,8 +1,10 @@
 {%- comment -%}
   Interactive example network. Content lives in _data/network.yml.
   Without JavaScript every explanation is shown in full below the diagram.
+  compact=true shows one-line summaries and links each part to its full
+  explanation on the Technology & Integration page (used on the homepage).
 {%- endcomment -%}
-<div class="nx" data-nx>
+<div class="nx{% if include.compact %} nx--compact{% endif %}" data-nx>
   <div class="nx__stage" data-nx-stage>
     <svg class="nx__links" aria-hidden="true" focusable="false"></svg>
     {% for layer in site.data.network.layers %}
@@ -31,10 +33,14 @@
       <p class="nx__kicker">{{ n.tag }}</p>
       <h3>{{ n.name }}</h3>
       <p class="nx__summary">{{ n.summary }}</p>
+      {% if include.compact %}
+      <a class="text-link nx__more" href="{{ '/care-technology-integration/' | relative_url }}?node={{ n.id }}#architecture">Technical and operational detail</a>
+      {% else %}
       <h4>Technical considerations</h4>
       <ul>{% for t in n.technical %}<li>{{ t }}</li>{% endfor %}</ul>
       <h4>Operational considerations</h4>
       <ul>{% for o in n.operational %}<li>{{ o }}</li>{% endfor %}</ul>
+      {% endif %}
     </div>
     {% endfor %}{% endfor %}
   </div>

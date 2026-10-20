@@ -3,6 +3,7 @@ stages:
   - id: design
     name: Design
     lead: We work out what the building needs before anything is ordered or installed.
+    outputs: Network specification, coverage heatmaps and data point schedule
     activities:
       - Review drawings for a new build, or survey the building for an existing home
       - Plan access point positions for coverage and capacity, room by room
@@ -17,6 +18,7 @@ stages:
   - id: coordinate
     name: Coordinate
     lead: We make sure every trade and supplier knows what the network needs, and when.
+    outputs: Agreed responsibilities and visit dates against the programme
     activities:
       - Issue the data point schedule to the electrical contractor for first fix
       - Agree containment routes and comms room space with the design team
@@ -29,6 +31,7 @@ stages:
   - id: install
     name: Install
     lead: The physical network is installed, labelled and tested.
+    outputs: Labelled infrastructure and Fluke-certified cable test results
     activities:
       - Structured cabling and fibre backbone, installed by us or by the site electrician to our schedule
       - Cabinets, core and edge switching, router and firewall
@@ -41,6 +44,7 @@ stages:
   - id: commission
     name: Commission
     lead: The network is configured, tested and handed over with proper records.
+    outputs: As-built records and a handover walkthrough
     activities:
       - Configure segmentation, security rules and priority for care systems
       - Check coverage and roaming across the building
@@ -53,6 +57,7 @@ stages:
   - id: support
     name: Support
     lead: Our involvement can continue once residents move in.
+    outputs: Monitoring, troubleshooting and changes once residents move in
     activities:
       - Monitoring of the internet connection, switching and access points
       - Troubleshooting by engineers who know the building

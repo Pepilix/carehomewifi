@@ -1,0 +1,29 @@
+{%- comment -%}
+  One approved case study as supporting evidence on a service page.
+  Usage: {% include evidence.html project="roche-care-homes" note="Why it's relevant here" %}
+  Reads the project's client, image, highlights and outcome from _projects/.
+{%- endcomment -%}
+{%- assign p = nil -%}
+{%- for item in site.projects -%}{%- if item.url contains include.project -%}{%- assign p = item -%}{%- endif -%}{%- endfor -%}
+{%- if p -%}
+<section class="section section--tight" aria-labelledby="evidence-{{ include.project }}">
+  <div class="container">
+    <article class="evidence">
+      <a class="evidence__media" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ p.image | relative_url }}" alt="" loading="lazy" width="1024" height="683">
+      </a>
+      <div class="evidence__body">
+        <p class="eyebrow">Case study · {{ p.sector }}</p>
+        <h2 id="evidence-{{ include.project }}">{{ p.client }}</h2>
+        {% if include.note %}<p class="evidence__note">{{ include.note }}</p>{% endif %}
+        {% if p.highlights %}
+        <dl class="case__facts">
+          {% for f in p.highlights %}<div><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>{% endfor %}
+        </dl>
+        {% endif %}
+        <a class="text-link" href="{{ p.url | relative_url }}">Read the {{ p.client }} case study</a>
+      </div>
+    </article>
+  </div>
+</section>
+{%- endif -%}

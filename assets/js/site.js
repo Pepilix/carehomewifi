@@ -55,7 +55,7 @@
   $$('.journey__media .photo, .split > figure.photo, .grid-2 > figure.photo').forEach(function (f) {
     if (!f.closest('.page-hero, .home-hero')) f.classList.add('reveal-img');
   });
-  var revealables = $$('.reveal, .reveal-img, .netdiagram, [data-nx]');
+  var revealables = $$('.reveal, .reveal-img, [data-nx]');
   var onReveal = function (el) {
     el.classList.add('is-visible');
     if (el._onReveal) el._onReveal();
@@ -182,6 +182,10 @@
       n.addEventListener('click', function () { select(n.dataset.node); });
       n.addEventListener('keydown', function (e) { if (e.key === 'Escape' && current) { e.preventDefault(); select(current); } });
     });
+
+    // Arriving from a homepage "technical detail" link: open that part.
+    var preset = new URLSearchParams(location.search).get('node');
+    if (preset && byId[preset]) select(preset);
   });
 
   /* ======================================================================
@@ -221,6 +225,7 @@
      ====================================================================== */
   $$('[data-showcase]').forEach(function (sc) {
     var bar = $('.showcase__filters', sc);
+    if (!bar) return; // filters switched off for this instance
     var chips = $$('.chip', bar);
     var items = $$('.showcase__item', sc);
     var count = $('.showcase__count', sc);
