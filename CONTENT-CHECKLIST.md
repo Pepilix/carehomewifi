@@ -35,7 +35,7 @@ Technology & Integration, Managed WiFi & Support, Contact, About and Privacy.
 - [ ] **Retention period:** decide how long enquiries that don't lead to work are kept. 24 months is a common, defensible choice. The notice currently says "only as long as we need them".
 - [ ] **Privacy notice review:** have whoever handles Inspire AV's data protection read `/privacy/` against the ICO's checklist (ico.org.uk/for-organisations/advice-for-small-organisations/privacy-notices-and-cookies).
 - [ ] **hello@carehomewifi.com:** carehomewifi.com had no mail server at launch, so mail to hello@ bounced. The site shows jonathan.a@inspire-av.com until a mailbox or forward is set up; then change `email:` in `_config.yml` back to hello@carehomewifi.com.
-- [x] Accreditations: SafeContractor approved; insured for construction-site and care-home work (About).
+- [x] Accreditations: SafeContractor approved; CSCS-carded engineers; insured for construction-site and care-home work (About).
 
 ## 4. Service details
 
