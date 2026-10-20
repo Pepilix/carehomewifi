@@ -63,3 +63,9 @@ The site uses only real project photos. Placeholders are marked **Photo to follo
 - [ ] Activate FormSubmit: send one test enquiry from the live domain, then Jonathan clicks the confirmation email.
 - [ ] Add the Google TXT record at GoDaddy (Search Console Domain property), then submit `https://carehomewifi.com/sitemap.xml` in Search Console.
 - [x] **Enforce HTTPS**, switched on via the GitHub API at the second launch (20 Oct 2026).
+
+## 8. Search engines (from the editorial and SEO review, 20 Oct 2026)
+
+- [ ] **Ask Google to recrawl.** Earlier today, the interim one-page site briefly served `/new-build-care-home-networks/` and `/care-home-wifi-problems/` as "page moved" stubs, and had no `/services/`. All three now return the real pages (200). Once Search Console is verified, use URL Inspection → Request indexing on those three, then resubmit `sitemap.xml`.
+- [ ] **True 301 redirects (optional).** GitHub Pages can't send server-side 301s, so superseded URLs (`/case-studies/`, `/knowledge/…`, `/care-home-network-upgrades/` and others) use instant HTML redirects with a canonical tag and `noindex`. Google treats these as permanent redirects, but some crawlers report them as "moved" pages. For real 301s, put the domain behind Cloudflare (free plan, redirect rules) or move hosting to Netlify (`_redirects` file). Worth doing only if old URLs still carry search traffic or links.
+- [ ] **LNT programme figures and Bradshaw Lodge's town**, as in section 1, would strengthen the case studies further.

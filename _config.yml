@@ -72,5 +72,6 @@ kramdown:
 exclude:
   - README.md
   - CONTENT-CHECKLIST.md
+  - SEO-MAP.md
   - tools/
   - .github/
