@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,25 @@
 <meta property="og:description" content="We design, install and support the network infrastructure behind modern UK care homes.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.carehomewifi.com/">
+<meta property="og:image" content="https://www.carehomewifi.com/assets/hero-ap-install.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F2EA">
+<meta name="google-site-verification" content="rpIIRBk_5GeOTAxsVPoGxJIO_kPPLuaqXh_SiOBkx3s">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-ap-install.jpg">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script>
+  (function (d) {
+    d.classList.replace('no-js', 'js');
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('reduced');
+    // If scripts fail to load, never leave the visitor behind the loader.
+    setTimeout(function () { if (!d.classList.contains('booted')) d.classList.add('reduced'); }, 6000);
+  })(document.documentElement);
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,412 +47,652 @@
   },
   "areaServed": "United Kingdom",
   "description": "Specialist WiFi, network and data infrastructure design, installation and support for UK care homes. Over 7 years' experience, 100+ care homes completed, 3,000+ devices installed and managed.",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "Inspire Audio Visual",
-    "url": "https://www.inspire-av.com/"
-  },
+  "parentOrganization": { "@type": "Organization", "name": "Inspire Audio Visual", "url": "https://www.inspire-av.com/" },
   "sameAs": []
 }
 </script>
-<link rel="stylesheet" href="assets/style.css">
-<link rel="stylesheet" href="assets/print.css" media="print">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Why does care-home WiFi keep dropping out?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually it isn't one single fault, but a network that was never designed for how much a care home now asks of it: access points positioned for fewer devices, poor roaming, overloaded access points, resident streaming competing with operational systems, flat unsegmented networks, mixed ageing hardware, broadband bottlenecks and no monitoring." } },
+    { "@type": "Question", "name": "Will you need to replace all our hardware?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. We survey and diagnose the existing network first, and only recommend replacing what's genuinely causing the problem. Much of the time, existing equipment can stay in place once the design around it is corrected." } },
+    { "@type": "Question", "name": "How disruptive is a Network Health Check?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The survey itself is non-intrusive and scheduled around the home's routine. Any follow-on work is planned to avoid disrupting care operations, residents or staff shifts." } },
+    { "@type": "Question", "name": "Why should staff and resident WiFi be separated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "On a flat network, care systems, staff devices, residents and guests share one network with no separation or prioritisation, so resident streaming can slow down care devices. A segmented network gives each category of device its own logical network, prioritised and secured on its own terms." } },
+    { "@type": "Question", "name": "When should we involve you on a new build?",
+      "acceptedAnswer": { "@type": "Answer", "text": "As early as possible, ideally at design stage. Getting the network right during construction is significantly easier and cheaper than correcting design problems once the building is operational." } },
+    { "@type": "Question", "name": "Do you look after the network once it's live?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every network is validated, tested and handed over with documentation, and we offer remote monitoring, network support and ongoing management afterwards." } }
+  ]
+}
+</script>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<header class="site">
-  <div class="wrap header-row">
-    <a href="/" class="logo-link" aria-label="CareHomeWiFi.com home">
-      <img src="assets/logo-horizontal.png" alt="CareHomeWiFi.com">
+<!-- ============ PRELOADER ============ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__mark" viewBox="0 0 64 64" fill="none">
+      <path class="lm-house" d="M8 24 L32 6 L56 24 V56 a4 4 0 0 1 -4 4 H12 a4 4 0 0 1 -4 -4 Z" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
+      <path class="lm-arc" d="M20 28 Q32 18 44 28" stroke="var(--accent)" stroke-width="3.2" stroke-linecap="round"/>
+      <path class="lm-heart" d="M32 50 C24 44 21 40.5 21 37 a5 5 0 0 1 11 -2 a5 5 0 0 1 11 2 c0 3.5 -3 7 -11 13Z" fill="var(--accent)"/>
+    </svg>
+    <div class="loader__count"><span class="loader__num">0</span><span class="loader__pct">%</span></div>
+  </div>
+  <p class="loader__line">Reliable connectivity is part of delivering care.</p>
+</div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+<div class="svc-float" aria-hidden="true"><div class="svc-float__inner"></div></div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav" data-theme="dark">
+  <div class="nav__row">
+    <a href="#top" class="nav__logo" aria-label="CareHomeWiFi.com — back to top">
+      <img class="logo-dark" src="assets/logo-horizontal.png" alt="CareHomeWiFi.com" width="2800" height="528">
+      <img class="logo-light" src="assets/logo-reverse.png" alt="" width="2800" height="528">
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="mainnav" onclick="document.getElementById('mainnav').classList.toggle('open'); this.setAttribute('aria-expanded', document.getElementById('mainnav').classList.contains('open'))">Menu</button>
-    <nav class="main" id="mainnav">
-      <a href="/new-build-care-home-networks/">New Build</a>
-      <a href="/care-home-wifi-problems/">Existing Homes</a>
-      <a href="/services/">Services</a>
-      <a href="/case-studies/">Projects</a>
-      <a href="/knowledge/">Knowledge</a>
-      <a href="/about/">About</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#paths">New Build</a>
+      <a href="#health-check">Existing Homes</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a href="/contact/" class="btn primary header-cta">Discuss a Project</a>
+    <div class="nav__end">
+      <a class="nav__tel" href="tel:03304303490">0330 430 3490</a>
+      <a href="#contact" class="btn btn--accent btn--sm" data-magnetic><span>Discuss a project</span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
   </div>
 </header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__links" aria-label="Mobile">
+    <a href="#paths"><i>01</i>New Build</a>
+    <a href="#health-check"><i>02</i>Existing Homes</a>
+    <a href="#services"><i>03</i>Services</a>
+    <a href="#projects"><i>04</i>Projects</a>
+    <a href="#about"><i>05</i>About</a>
+    <a href="#contact"><i>06</i>Contact</a>
+  </nav>
+  <div class="menu__foot">
+    <a href="tel:03304303490">0330 430 3490</a>
+    <a href="mailto:hello@carehomewifi.com">hello@carehomewifi.com</a>
+  </div>
+</div>
 
 <main id="main">
 
   <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Care Home WiFi &amp; Network Specialists</span>
-        <h1>Reliable connectivity is now part of delivering care.</h1>
-        <p class="lede">WiFi, networks and data infrastructure designed specifically for UK care homes. Over 7 years' experience, more than 100 care homes completed and 3,000+ devices installed and managed to date.</p>
-        <div class="hero-ctas">
-          <a href="/contact/?type=new-build" class="btn primary">Discuss a care home project</a>
-          <a href="/care-home-wifi-problems/" class="btn secondary">Having WiFi problems?</a>
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="hero__media gl" data-gl="hero"
+         data-images="assets/hero-ap-install.jpg, assets/case-roche-tudor-house.jpg, assets/case-lnt-cinema-room.jpg, assets/cabinet-rack-install.jpg, assets/case-lnt-exterior.jpg">
+      <img src="assets/hero-ap-install.jpg" alt="An engineer fitting a ceiling-mounted wireless access point in a care home" class="gl__fallback">
+    </div>
+    <div class="hero__shade"></div>
+
+    <div class="hero__content wrap">
+      <p class="eyebrow eyebrow--light hero__eyebrow"><span class="pulse"></span>Care home WiFi &amp; networks <span class="hero__by">· by Inspire AV</span></p>
+      <h1 class="hero__title" data-split="hero">Reliable connectivity is now part of <em>delivering care.</em></h1>
+      <div class="hero__foot">
+        <p class="hero__lede">WiFi, networks and data infrastructure designed specifically for UK care homes — from first fix on a new build to the home that can't keep its tablets online.</p>
+        <div class="hero__ctas">
+          <a href="#contact" class="btn btn--light" data-magnetic><span>Discuss a care home project</span></a>
+          <a href="#health-check" class="link-arrow link-arrow--light">Having WiFi problems?</a>
         </div>
       </div>
-      <div class="hero-photo">
-        <div class="photo-frame ratio-tall" style="background:none;">
-          <img src="assets/hero-ap-install.jpg" alt="Engineer installing a ceiling-mounted wireless access point in a care home" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+
+    <div class="hero__meta wrap">
+      <div class="hero__caption" aria-live="polite">
+        <span class="mono hero__idx">01 / 05</span>
+        <span class="hero__cap">Ceiling access point, mid-install</span>
+      </div>
+      <div class="hero__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero__scroll mono" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats" aria-label="Track record">
+    <div class="wrap stats__grid">
+      <div class="stat"><span class="stat__num"><b data-count="7">0</b>+</span><span class="stat__label">Years in care home connectivity</span></div>
+      <div class="stat"><span class="stat__num"><b data-count="100">0</b>+</span><span class="stat__label">Care homes completed</span></div>
+      <div class="stat"><span class="stat__num"><b data-count="3000" data-format="comma">0</b>+</span><span class="stat__label">Devices installed &amp; managed</span></div>
+    </div>
+  </section>
+
+  <!-- ============ STATEMENT ============ -->
+  <section class="statement" id="why">
+    <div class="wrap statement__grid">
+      <div class="statement__head">
+        <p class="eyebrow">01 — The brief</p>
+        <h2 class="display" data-split>A care home isn't an office <em>with bedrooms.</em></h2>
+      </div>
+      <div class="statement__body">
+        <p class="statement__scrub" data-scrub-words>A modern care home asks one physical network to do a dozen different jobs at once — reliably, and without any one of them interfering with another. Care and clinical systems, staff devices, residents, visitors, security, voice and entertainment, each with different needs for reliability, security and priority.</p>
+        <p class="statement__aside fade-up">We design and build networks around that reality, rather than treating a care home like any other commercial building.</p>
+      </div>
+    </div>
+
+    <div class="wrap statement__visual">
+      <figure class="frame frame--wide reveal-clip">
+        <div class="frame__media parallax gl" data-gl="hover" data-images="assets/cabinet-comms-cupboard.jpg">
+          <img src="assets/cabinet-comms-cupboard.jpg" alt="A comms cupboard housing network, alarm and building-systems equipment, neatly cabled and labelled" class="gl__fallback" loading="lazy">
         </div>
+      </figure>
+      <div class="roles">
+        <p class="roles__lead">One network, carrying</p>
+        <div class="roles__window" aria-live="off">
+          <ul class="roles__list">
+            <li>care &amp; staff systems.</li>
+            <li>residents' video calls.</li>
+            <li>building systems.</li>
+            <li>security.</li>
+            <li>voice.</li>
+            <li>entertainment.</li>
+          </ul>
+        </div>
+        <p class="mono roles__note">Fig. 02 — Comms cupboard: network, alarm and building systems sharing one wall.</p>
       </div>
     </div>
   </section>
 
-  <div class="credibility">
+  <!-- ============ STARTING POINTS ============ -->
+  <section class="paths" id="paths">
     <div class="wrap">
-      <div class="item"><span class="dot"></span>7+ years in care home connectivity</div>
-      <div class="item"><span class="dot"></span>100+ care homes completed</div>
-      <div class="item"><span class="dot"></span>3,000+ devices installed &amp; managed</div>
-    </div>
-  </div>
-
-  <!-- ============ NOT AN OFFICE WITH BEDROOMS ============ -->
-  <section class="tight">
-    <div class="wrap office-grid">
-      <div class="photo-frame ratio-tall">
-        <span class="photo-tag">[IMAGE: set of WiFi network plans — floor plan with AP placement markers, coverage zones and cabling routes, laid out as a design/technical drawing]</span>
+      <div class="section-head">
+        <p class="eyebrow">02 — Where you're starting from</p>
+        <h2 class="display" data-split>Two starting points. <em>One team.</em></h2>
       </div>
-      <div class="office-copy">
-        <h2>A care home isn't an office with bedrooms.</h2>
-        <p>A modern care home asks one physical network to do a dozen different jobs at once — reliably, and without any one of them interfering with another. The same infrastructure increasingly needs to support care and clinical systems, staff devices, residents, visitors, security, voice and entertainment, each with different requirements for reliability, security and priority.</p>
-        <p>We design and build networks around that reality, rather than treating a care home like any other commercial building.</p>
-        <div class="tag-row">
-          <span>Care &amp; Staff</span><span class="sep">·</span>
-          <span>Residents</span><span class="sep">·</span>
-          <span>Building Systems</span><span class="sep">·</span>
-          <span>Security</span><span class="sep">·</span>
-          <span>Voice</span><span class="sep">·</span>
-          <span>Entertainment</span>
-        </div>
+
+      <div class="paths__grid">
+        <article class="path">
+          <a href="#contact" data-type="New build" class="path__img reveal-clip" data-cursor="Enquire">
+            <div class="frame__media parallax gl" data-gl="hover" data-images="assets/case-lnt-exterior.jpg">
+              <img src="assets/case-lnt-exterior.jpg" alt="Bradshaw Lodge, a newly built care home on its opening day" class="gl__fallback" loading="lazy">
+            </div>
+          </a>
+          <div class="path__body">
+            <p class="mono path__tag">A · New build</p>
+            <h3 class="path__title">Get the infrastructure right before the building opens.</h3>
+            <p>Getting the network right during construction is significantly easier — and cheaper — than correcting fundamental design problems once a building is operational. We work alongside developers, main contractors, M&amp;E consultants and architects from design stage to handover.</p>
+            <ol class="steps">
+              <li><span>01</span>Design, cabling &amp; wireless specification</li>
+              <li><span>02</span>Installation &amp; commissioning</li>
+              <li><span>03</span>Validation, documentation &amp; handover</li>
+            </ol>
+            <a href="#contact" data-type="New build" class="link-arrow">Discuss a new build</a>
+          </div>
+        </article>
+
+        <article class="path path--offset">
+          <a href="#health-check" class="path__img reveal-clip" data-cursor="Explore">
+            <div class="frame__media parallax gl" data-gl="hover" data-images="assets/cabinet-rack-install.jpg">
+              <img src="assets/cabinet-rack-install.jpg" alt="A tidily patched and labelled network cabinet in a care-home communications room" class="gl__fallback" loading="lazy">
+            </div>
+          </a>
+          <div class="path__body">
+            <p class="mono path__tag">B · Existing care home</p>
+            <h3 class="path__title">Not everything needs replacing.</h3>
+            <p>Where WiFi is dropping out, coverage is patchy or staff devices keep disconnecting, we diagnose the actual cause before recommending anything. A survey shows what can stay, what needs reconfiguring, and what genuinely needs replacing.</p>
+            <ol class="steps">
+              <li><span>01</span>Network health check / WiFi survey</li>
+              <li><span>02</span>Diagnosis &amp; recommendation</li>
+              <li><span>03</span>Upgrade works, scheduled around operations</li>
+            </ol>
+            <a href="#health-check" class="link-arrow">How a health check works</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ PATHWAYS ============ -->
-  <section class="tight" style="padding-bottom:0;">
-    <div class="wrap pathways-head">
-      <h2>Two starting points, one team.</h2>
-    </div>
-  </section>
-  <div class="wrap"><div class="pathways">
-    <div class="pathway">
-      <span class="eyebrow">New Build</span>
-      <h3>Get the infrastructure right before the building opens.</h3>
-      <p>Getting the network right during construction is significantly easier — and cheaper — than correcting fundamental design problems once a building is operational. We work alongside developers, main contractors, M&amp;E consultants and architects from design stage through to handover.</p>
-      <ol>
-        <li><b>01</b> Design, cabling &amp; wireless specification</li>
-        <li><b>02</b> Installation &amp; commissioning</li>
-        <li><b>03</b> Validation, documentation &amp; handover</li>
-      </ol>
-      <a href="/new-build-care-home-networks/" class="btn ghost">New Build Care Homes →</a>
-    </div>
-    <div class="pathway">
-      <span class="eyebrow">Existing Care Home</span>
-      <h3>Not everything needs replacing.</h3>
-      <p>Where WiFi is dropping out, coverage is patchy or staff devices keep disconnecting, we diagnose the actual cause before recommending anything. A survey identifies what can stay, what needs reconfiguring, and what genuinely needs replacing.</p>
-      <ol>
-        <li><b>01</b> Network health check / WiFi survey</li>
-        <li><b>02</b> Diagnosis &amp; recommendation</li>
-        <li><b>03</b> Upgrade works, scheduled around operations</li>
-      </ol>
-      <a href="/care-home-wifi-problems/" class="btn ghost">Book a Network Health Check →</a>
-    </div>
-  </div></div>
-
-  <!-- ============ CAPABILITY AREAS ============ -->
-  <section>
+  <!-- ============ HEALTH CHECK (existing homes) ============ -->
+  <section class="health" id="health-check">
     <div class="wrap">
-      <div class="cap-head">
-        <h2>Design, install, fix and support — end to end.</h2>
-        <a href="/services/" class="btn ghost">All services →</a>
+      <div class="section-head">
+        <p class="eyebrow">03 — Existing care homes</p>
+        <h2 class="display" data-split>Does this <em>sound familiar?</em></h2>
       </div>
-      <div class="cap-grid">
-        <div class="cap">
-          <span class="cap-num">DESIGN</span>
-          <h3>Design</h3>
-          <p>WiFi design, network architecture and technical consultancy for new and existing buildings.</p>
-          <a href="/care-home-wifi-design/">WiFi &amp; network design →</a>
-        </div>
-        <div class="cap">
-          <span class="cap-num">INSTALL</span>
-          <h3>Install</h3>
-          <p>Structured cabling, fibre, switching and wireless infrastructure, fully commissioned and tested.</p>
-          <a href="/care-home-wifi-installation/">Installation &amp; cabling →</a>
-        </div>
-        <div class="cap">
-          <span class="cap-num">FIX</span>
-          <h3>Fix</h3>
-          <p>WiFi surveys, network health checks, troubleshooting and diagnosis-led upgrades.</p>
-          <a href="/care-home-wifi-problems/">Surveys &amp; upgrades →</a>
-        </div>
-        <div class="cap">
-          <span class="cap-num">SUPPORT</span>
-          <h3>Support</h3>
-          <p>Remote monitoring, network support and ongoing management once the network is live.</p>
-          <a href="/managed-care-home-wifi/">Managed WiFi →</a>
+
+      <div class="health__grid">
+        <ul class="symptoms">
+          <li>WiFi dropping out during the day, for no obvious reason</li>
+          <li>Slow WiFi, especially when several devices are in use</li>
+          <li>Dead spots in certain rooms or corridors</li>
+          <li>Staff tablets disconnecting mid-task</li>
+          <li>Care or nurse-call devices losing connection</li>
+          <li>Residents unable to video call family reliably</li>
+          <li>Smart TVs buffering or losing their stream</li>
+          <li>Devices roaming badly between access points</li>
+          <li>The internet connection itself feeling unstable</li>
+          <li>Repeated complaints from residents, families or staff</li>
+        </ul>
+
+        <div class="health__copy">
+          <p class="health__lede fade-up">In most cases it's not one single fault, but a network that was never designed for how much a care home now asks of it. The cause is almost always fixable — usually without replacing everything.</p>
+          <p class="mono health__label fade-up">The Network Health Check</p>
+          <ol class="process">
+            <li><span class="mono">01</span><div><h3>Survey</h3><p>On-site wireless and network survey — coverage, capacity, interference and configuration, measured rather than guessed at.</p></div></li>
+            <li><span class="mono">02</span><div><h3>Diagnosis</h3><p>We identify the actual cause, or causes, rather than the most obvious symptom.</p></div></li>
+            <li><span class="mono">03</span><div><h3>Recommendation</h3><p>A clear, honest report: what to retain, what to reconfigure and what to replace — with reasons.</p></div></li>
+            <li><span class="mono">04</span><div><h3>Fix</h3><p>If you'd like us to do the work, it's scheduled around the home's routine and care operations.</p></div></li>
+          </ol>
+          <a href="#contact" data-type="WiFi problem / health check" class="btn btn--accent fade-up" data-magnetic><span>Book a Network Health Check</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ TECHNICAL (DARK) ============ -->
-  <section class="technical">
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
     <div class="wrap">
-      <span class="eyebrow">How it's built</span>
-      <h2>Designed around everything your care home needs to connect.</h2>
-      <p>Underneath the finish and the furniture sits a properly segmented network — every category of device on its own logical network, prioritised and secured on its own terms.</p>
-      <div class="flow">
-        <span class="fbox">INTERNET</span><span class="farrow">→</span>
-        <span class="fbox">SECURE NETWORK</span>
+      <div class="section-head section-head--split">
+        <div>
+          <p class="eyebrow">04 — Services</p>
+          <h2 class="display" data-split>Design, install, fix <em>and support.</em></h2>
+        </div>
+
       </div>
-      <div class="seg-row">
-        <span class="seg"><span class="n">01</span>CARE / OPERATIONS</span>
-        <span class="seg"><span class="n">02</span>STAFF</span>
-        <span class="seg"><span class="n">03</span>RESIDENTS</span>
-        <span class="seg"><span class="n">04</span>GUEST</span>
-        <span class="seg"><span class="n">05</span>BUILDING</span>
-        <span class="seg"><span class="n">06</span>SECURITY</span>
-        <span class="seg"><span class="n">07</span>VOICE</span>
-        <span class="seg"><span class="n">08</span>ENTERTAINMENT</span>
+
+      <ul class="svc">
+        <li class="svc__row" data-img="assets/case-lnt-cinema-room.jpg">
+          <a href="#contact" data-type="WiFi &amp; network design">
+            <span class="mono svc__num">01</span>
+            <span class="svc__name">Design</span>
+            <span class="svc__desc">WiFi design, network architecture and technical consultancy for new and existing buildings.</span>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="svc__row" data-img="assets/hero-ap-install.jpg">
+          <a href="#contact" data-type="Installation &amp; cabling">
+            <span class="mono svc__num">02</span>
+            <span class="svc__name">Install</span>
+            <span class="svc__desc">Structured cabling, fibre, switching and wireless infrastructure — fully commissioned and tested.</span>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="svc__row" data-img="assets/cabinet-comms-cupboard.jpg">
+          <a href="#contact" data-type="WiFi problem / health check">
+            <span class="mono svc__num">03</span>
+            <span class="svc__name">Fix</span>
+            <span class="svc__desc">WiFi surveys, network health checks, troubleshooting and diagnosis-led upgrades.</span>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="svc__row" data-img="assets/cabinet-rack-install.jpg">
+          <a href="#contact" data-type="Managed WiFi &amp; support">
+            <span class="mono svc__num">04</span>
+            <span class="svc__name">Support</span>
+            <span class="svc__desc">Remote monitoring, network support and ongoing management once the network is live.</span>
+            <span class="svc__go" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ NETWORK ============ -->
+  <section class="network" id="network" aria-labelledby="network-title">
+    <div class="network__pin">
+      <div class="wrap network__inner">
+        <div class="network__copy">
+          <p class="eyebrow eyebrow--light">05 — How it's built</p>
+          <h2 class="display display--light" id="network-title" data-split>Designed around everything your care home <em>needs to connect.</em></h2>
+          <p class="network__lede">Underneath the finish and the furniture sits a properly segmented network — every category of device on its own logical network, prioritised and secured on its own terms.</p>
+        </div>
+
+        <div class="netmap">
+          <svg class="netmap__svg" viewBox="0 0 1000 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="trunk" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#F5F2EA" stop-opacity=".2"/>
+                <stop offset="1" stop-color="#F5F2EA" stop-opacity=".7"/>
+              </linearGradient>
+            </defs>
+            <!-- internet -> core -->
+            <path id="np-trunk" class="np np--trunk" d="M500 54 V150" />
+            <!-- core -> segments -->
+            <path id="np-0" class="np" d="M500 206 C500 300, 62.5 280, 62.5 380"/>
+            <path id="np-1" class="np" d="M500 206 C500 300, 187.5 280, 187.5 380"/>
+            <path id="np-2" class="np" d="M500 206 C500 300, 312.5 280, 312.5 380"/>
+            <path id="np-3" class="np" d="M500 206 C500 300, 437.5 280, 437.5 380"/>
+            <path id="np-4" class="np" d="M500 206 C500 300, 562.5 280, 562.5 380"/>
+            <path id="np-5" class="np" d="M500 206 C500 300, 687.5 280, 687.5 380"/>
+            <path id="np-6" class="np" d="M500 206 C500 300, 812.5 280, 812.5 380"/>
+            <path id="np-7" class="np" d="M500 206 C500 300, 937.5 280, 937.5 380"/>
+
+            <g class="nn nn--net"><circle cx="500" cy="36" r="18"/><circle cx="500" cy="36" r="5" class="nn__dot"/></g>
+            <g class="nn nn--core">
+              <rect x="400" y="150" width="200" height="56" rx="28"/>
+              <text x="500" y="184" text-anchor="middle">SECURE NETWORK</text>
+            </g>
+            <g class="nn nn--seg">
+              <circle cx="62.5" cy="384" r="6"/><circle cx="187.5" cy="384" r="6"/><circle cx="312.5" cy="384" r="6"/><circle cx="437.5" cy="384" r="6"/>
+              <circle cx="562.5" cy="384" r="6"/><circle cx="687.5" cy="384" r="6"/><circle cx="812.5" cy="384" r="6"/><circle cx="937.5" cy="384" r="6"/>
+            </g>
+
+            <g class="packets">
+              <circle r="3"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#np-0"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" begin=".7s"><mpath href="#np-2"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.4s" repeatCount="indefinite" begin=".3s"><mpath href="#np-4"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.8s" repeatCount="indefinite" begin="1.1s"><mpath href="#np-6"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.3s" repeatCount="indefinite" begin="1.5s"><mpath href="#np-1"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.5s" repeatCount="indefinite" begin=".9s"><mpath href="#np-5"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.7s" repeatCount="indefinite" begin="1.8s"><mpath href="#np-7"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="2.1s" repeatCount="indefinite" begin="2.1s"><mpath href="#np-3"/></animateMotion></circle>
+              <circle r="3"><animateMotion dur="1.4s" repeatCount="indefinite" begin="0s"><mpath href="#np-trunk"/></animateMotion></circle>
+            </g>
+          </svg>
+          <p class="netmap__internet mono">Internet</p>
+
+          <ol class="netmap__labels">
+            <li><span>01</span>Care / Operations</li>
+            <li><span>02</span>Staff</li>
+            <li><span>03</span>Residents</li>
+            <li><span>04</span>Guest</li>
+            <li><span>05</span>Building</li>
+            <li><span>06</span>Security</li>
+            <li><span>07</span>Voice</li>
+            <li><span>08</span>Entertainment</li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ EXPERIENCE ============ -->
-  <section>
-    <div class="wrap exp-grid">
-      <div class="exp-copy">
-        <h2>Seven years inside care homes.</h2>
-        <div class="stat-line"><div class="bar"></div><p><strong>100+ care homes completed</strong> and <strong>3,000+ devices</strong> installed and managed to date — across new-build and operational sites throughout the UK.</p></div>
-        <div class="stat-line"><div class="bar"></div><p>Care homes run 24 hours a day — disruption during installation or upgrade work is planned around the building, not the other way round.</p></div>
-        <div class="stat-line"><div class="bar"></div><p>Access points need to work architecturally as well as technically, positioned for coverage without looking out of place in a resident's corridor or lounge.</p></div>
-        <div class="stat-line"><div class="bar"></div><p>On new-build sites, infrastructure needs coordinating with other trades during first fix — sequencing matters as much as the design itself.</p></div>
-        <div class="stat-line"><div class="bar"></div><p>Handover documentation matters. A network without accurate records becomes very difficult for anyone to support later, including us.</p></div>
+  <section class="experience" id="about">
+    <div class="wrap experience__grid">
+      <div class="experience__media">
+        <figure class="frame frame--tall reveal-clip">
+          <div class="frame__media parallax gl" data-gl="hover" data-images="assets/hero-ap-install.jpg">
+            <img src="assets/hero-ap-install.jpg" alt="An engineer fitting a wireless access point to a care-home ceiling" class="gl__fallback" loading="lazy">
+          </div>
+        </figure>
+        <figcaption class="mono fig">Fig. 03 — Positioned for coverage, and for the corridor it hangs in.</figcaption>
       </div>
-      <div class="photo-frame ratio-tall">
-        <span class="photo-tag">[IMAGE: engineer carrying out wireless survey in care-home corridor, survey equipment visible]</span>
+
+      <div class="experience__copy">
+        <p class="eyebrow">06 — About us</p>
+        <h2 class="display" data-split>Seven years <em>inside care homes.</em></h2>
+        <p class="experience__lede fade-up">100+ care homes completed and 3,000+ devices installed and managed to date — across new-build and operational sites throughout the UK. Here's what that time has taught us.</p>
+        <p class="experience__parent fade-up"><span class="mono">An Inspire AV company</span>CareHomeWiFi.com is the commercial care-sector arm of <a href="https://www.inspire-av.com/" target="_blank" rel="noopener">Inspire Audio Visual</a>, based at Thorp Arch Estate near Wetherby — one team, from survey to support.</p>
+
+        <ol class="principles">
+          <li class="principle">
+            <span class="mono principle__n">i.</span>
+            <div><h3>The home never stops.</h3><p>Care homes run 24 hours a day — disruption during installation or upgrade work is planned around the building, not the other way round.</p></div>
+          </li>
+          <li class="principle">
+            <span class="mono principle__n">ii.</span>
+            <div><h3>Technology should disappear.</h3><p>Access points need to work architecturally as well as technically, positioned for coverage without looking out of place in a resident's corridor or lounge.</p></div>
+          </li>
+          <li class="principle">
+            <span class="mono principle__n">iii.</span>
+            <div><h3>Sequencing is design.</h3><p>On new-build sites, infrastructure needs coordinating with other trades during first fix — sequencing matters as much as the design itself.</p></div>
+          </li>
+          <li class="principle">
+            <span class="mono principle__n">iv.</span>
+            <div><h3>Records outlive installs.</h3><p>Handover documentation matters. A network without accurate records becomes very difficult for anyone to support later, including us.</p></div>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <!-- ============ CASE STUDY ============ -->
-  <section class="tight">
-    <div class="wrap">
-      <div class="case-head">
-        <h2>Featured projects.</h2>
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects" aria-labelledby="projects-title">
+    <div class="projects__pin">
+      <div class="projects__head wrap">
+        <p class="eyebrow">07 — Featured projects</p>
+        <h2 class="display" id="projects-title">Selected <em>work.</em></h2>
+        <p class="mono projects__hint" aria-hidden="true">Keep scrolling →</p>
       </div>
-      <div class="case-frame" style="display:grid; grid-template-columns:2fr 1fr; gap:12px; margin-bottom:28px;">
-        <div style="aspect-ratio:16/10; overflow:hidden;">
-          <img src="assets/case-roche-tudor-house.jpg" alt="Tudor House, a Roche Care Homes site in Yorkshire, exterior view" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-        <div style="aspect-ratio:16/10; overflow:hidden;">
-          <img src="assets/case-roche-secondary.jpg" alt="A Roche Care Homes site in Yorkshire, exterior view" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-      </div>
-      <div class="case-body">
-        <div>
-          <div class="case-meta">
-            <span>EXISTING CARE HOME</span><span>YORKSHIRE</span><span>ROCHE CARE HOMES</span>
+
+      <div class="projects__track">
+        <article class="proj">
+          <div class="proj__img">
+            <div class="frame__media gl" data-gl="hover" data-images="assets/case-roche-tudor-house.jpg">
+              <img src="assets/case-roche-tudor-house.jpg" alt="Tudor House, a Roche Care Homes property in Yorkshire" class="gl__fallback" loading="lazy">
+            </div>
           </div>
-          <h3>Roche Care Homes — WiFi &amp; network upgrade</h3>
-          <p>Roche Care Homes' existing WiFi was struggling to keep up with demand — inconsistent coverage was affecting staff use of digital health-monitoring tools, connectivity dropouts were disrupting residents' calls with family, and the network simply hadn't been built for the number of devices now in daily use across staff, residents and visitors.</p>
-          <p>We surveyed the existing infrastructure, designed a network to cover the whole property — communal areas, private rooms and outdoor spaces — and rolled it out in phases so care operations were never interrupted. Staff training and a 12-month on-site support warranty were included as part of the handover.</p>
-          <blockquote style="border-left:3px solid var(--orange); padding-left:20px; margin:24px 0; font-style:italic; color:var(--graphite-soft); font-size:1.02rem;">
-            "Thanks to all the team for your work in getting this all completed again with minimal disruption to the site. It's much appreciated and all the homes have been very positive about CareHomeWiFi."
-            <footer style="margin-top:10px; font-style:normal; font-size:0.85rem; color:var(--steel); font-family:'Manrope',sans-serif; font-weight:600;">— Patrick Roche, Development Director, Roche Care Homes</footer>
-          </blockquote>
-          <a href="/case-studies/" class="btn ghost">View project →</a>
-        </div>
-        <div class="case-specs">
-          <div><span>Care homes covered</span><span>Multiple sites</span></div>
-          <div><span>Rollout</span><span>Phased, zero care disruption</span></div>
-          <div><span>Support</span><span>12-month on-site warranty</span></div>
-          <div><span>Access points</span><span>14</span></div>
-          <div><span>Devices managed</span><span>22</span></div>
-          <div><span>Management</span><span>Cloud-managed</span></div>
-        </div>
+          <div class="proj__body">
+            <p class="mono proj__tags"><span>Existing care home</span><span>Yorkshire</span></p>
+            <h3 class="proj__title">Roche Care Homes</h3>
+            <p class="proj__sub">WiFi &amp; network upgrade</p>
+            <p>The existing WiFi couldn't keep up — patchy coverage affected staff use of digital health-monitoring tools and dropouts disrupted residents' calls with family. We surveyed, designed a network covering communal areas, private rooms and outdoor spaces, and rolled it out in phases so care was never interrupted.</p>
+            <dl class="specs">
+              <div><dt>Rollout</dt><dd>Phased, zero care disruption</dd></div>
+              <div><dt>Access points</dt><dd>14</dd></div>
+              <div><dt>Devices managed</dt><dd>22</dd></div>
+              <div><dt>Support</dt><dd>12-month on-site warranty</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj__img">
+            <div class="frame__media gl" data-gl="hover" data-images="assets/case-lnt-cinema-room.jpg">
+              <img src="assets/case-lnt-cinema-room.jpg" alt="The cinema room at Bradshaw Lodge" class="gl__fallback" loading="lazy">
+            </div>
+          </div>
+          <div class="proj__body">
+            <p class="mono proj__tags"><span>New build</span><span>LNT Care Developments</span></p>
+            <h3 class="proj__title">Bradshaw Lodge</h3>
+            <p class="proj__sub">The LNT standard network</p>
+            <p>A single network engineered to cover the complete building, designed in before opening rather than retrofitted. UniFi WiFi 7 on a fibre backbone; data points pre-terminated by the site electrician, so two engineers have a home fully live in a single working day.</p>
+            <dl class="specs">
+              <div><dt>Bedrooms</dt><dd>66</dd></div>
+              <div><dt>Access points</dt><dd>28</dd></div>
+              <div><dt>Data points</dt><dd>150+</dd></div>
+              <div><dt>Installation</dt><dd>16 hrs · 2 engineers · 1 day</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <aside class="proj proj--end">
+          <p class="eyebrow">Your home next?</p>
+          <p class="proj__endline">100+ homes, new build and operational, across the UK.</p>
+          <a href="#contact" class="btn btn--dark" data-magnetic><span>Discuss your project</span></a>
+        </aside>
       </div>
+
+      <div class="projects__progress wrap" aria-hidden="true"><i></i></div>
     </div>
   </section>
 
-  <!-- ============ SECOND CASE STUDY — LNT NEW BUILD ============ -->
-  <section class="tight" style="padding-top:0;">
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="quote" aria-label="Client testimonial">
     <div class="wrap">
-      <div class="case-frame" style="display:grid; grid-template-columns:2fr 1fr; gap:12px; margin-bottom:28px;">
-        <div style="aspect-ratio:16/10; overflow:hidden;">
-          <img src="assets/case-lnt-exterior.jpg" alt="A new-build care home developed by LNT Care Developments, exterior view on opening day" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-        <div style="aspect-ratio:16/10; overflow:hidden;">
-          <img src="assets/case-lnt-cinema-room.jpg" alt="Cinema room within an LNT Care Developments care home, fitted with in-ceiling audio and a large display" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-      </div>
-      <div class="case-body">
-        <div>
-          <div class="case-meta">
-            <span>NEW BUILD</span><span>[LOCATION]</span><span>LNT CARE DEVELOPMENTS</span>
-          </div>
-          <h3>Bradshaw Lodge</h3>
-          <p>This WiFi and data design is standard across every LNT Care Developments home we work on — a single network engineered to cover the complete building for residents and staff alike, designed in before the building opens rather than retrofitted afterwards.</p>
-          <p>The network runs on UniFi WiFi 7 access points with a fibre backbone, giving each home the maximum bandwidth the incoming supply can support. Data points are cabled, terminated and tested by the onsite electrical contractor ahead of our visit, so once on site it takes two CareHomeWiFi engineers a single working day to have a home fully up and running. We coordinate closely with LNT's contractors on timing, and with <a href="https://www.ripplesolutions.co.uk/" style="color:var(--orange-deep); border-bottom:1px solid var(--orange);">Ripple Solutions</a>, who arrange the incoming line.</p>
-          <a href="/case-studies/" class="btn ghost">View project →</a>
-        </div>
-        <div class="case-specs">
-          <div><span>Bedrooms</span><span>66</span></div>
-          <div><span>Access points</span><span>28</span></div>
-          <div><span>Wireless</span><span>UniFi WiFi 7</span></div>
-          <div><span>Backbone</span><span>Fibre</span></div>
-          <div><span>Data points</span><span>150+</span></div>
-          <div><span>Installation</span><span>16 hrs (2 engineers, 1 day)</span></div>
-        </div>
-      </div>
+      <span class="quote__mark" aria-hidden="true">“</span>
+      <blockquote>
+        <p class="quote__text" data-scrub-words>Thanks to all the team for your work in getting this all completed again with minimal disruption to the site. It's much appreciated and all the homes have been very positive about CareHomeWiFi.</p>
+        <footer class="quote__by fade-up">
+          <img src="assets/roche-care-homes-logo.png" alt="Roche Care Homes" loading="lazy">
+          <span><b>Patrick Roche</b><br>Development Director, Roche Care Homes</span>
+        </footer>
+      </blockquote>
     </div>
   </section>
 
   <!-- ============ CLIENTS ============ -->
-  <section class="clients tight">
-    <div class="wrap">
-      <h2>Experience trusted across the UK care sector.</h2>
-      <p class="sub">A selection of the care-home developers and operators we've worked alongside.</p>
-      <div class="client-row">
-        <div class="client-name"><img src="assets/lnt-logo.jpg" alt="LNT Care Developments" style="height:34px; width:auto; filter:grayscale(100%); opacity:0.8;"></div>
-        <div class="client-name"><img src="assets/roche-care-homes-logo.png" alt="Roche Care Homes" style="height:40px; width:auto; filter:grayscale(100%); opacity:0.8;"></div>
-        <div class="client-name">[CLIENT NAME]</div>
-        <div class="client-name">[CLIENT NAME]</div>
+  <section class="clients" aria-label="Clients">
+    <div class="wrap clients__row">
+      <p class="eyebrow">Trusted across the UK care sector</p>
+      <div class="clients__logos">
+        <img src="assets/roche-care-homes-logo.png" alt="Roche Care Homes" loading="lazy">
+        <img src="assets/lnt-logo.jpg" alt="LNT Care Developments" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- ============ KNOWLEDGE ============ -->
-  <section>
-    <div class="wrap">
-      <div class="know-head">
-        <h2>From the knowledge centre.</h2>
-        <a href="/knowledge/" class="btn ghost">All articles →</a>
+  <!-- ============ FAQ ============ -->
+  <section class="knowledge" id="faq">
+    <div class="wrap faq__grid">
+      <div class="section-head">
+        <p class="eyebrow">08 — Questions</p>
+        <h2 class="display" data-split>Plain answers to <em>common questions.</em></h2>
       </div>
-      <div class="know-list">
-        <a class="know-row" href="/knowledge/how-should-wifi-be-designed-for-a-care-home/"><span class="know-title">How should WiFi be designed for a care home?</span><span class="know-cat">Design</span></a>
-        <a class="know-row" href="/knowledge/why-does-care-home-wifi-keep-dropping-out/"><span class="know-title">Why does care-home WiFi keep dropping out?</span><span class="know-cat">Troubleshooting</span></a>
-        <a class="know-row" href="/knowledge/staff-wifi-vs-resident-wifi/"><span class="know-title">Staff WiFi vs resident WiFi: why should they be separated?</span><span class="know-cat">Network Design</span></a>
-        <a class="know-row" href="/knowledge/what-network-infrastructure-does-a-new-care-home-need/"><span class="know-title">What network infrastructure does a new care home need?</span><span class="know-cat">New Build</span></a>
+      <div class="faq">
+        <details class="faq__item">
+          <summary><span class="mono">Troubleshooting</span><span class="faq__q">Why does care-home WiFi keep dropping out?</span><i aria-hidden="true"></i></summary>
+          <div class="faq__a"><p>Usually it isn't one single fault, but a network that was never designed for how much a care home now asks of it. The common causes are access points positioned for fewer devices or a different layout, devices clinging to a weak distant access point instead of roaming, overloaded access points, resident streaming competing with operational systems, flat unsegmented networks, mixed ageing hardware, broadband that hasn't kept pace — and no monitoring, so problems are only noticed once they're disruptive.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="mono">Existing homes</span><span class="faq__q">Will you need to replace all our hardware?</span><i aria-hidden="true"></i></summary>
+          <div class="faq__a"><p>Not necessarily. We survey and diagnose the existing network first, and only recommend replacing what's genuinely causing the problem. Structured cabling, cabinets and containment can often stay; switching and segmentation are more likely to need attention. Much of the time, existing equipment can stay in place once the design around it is corrected.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="mono">Existing homes</span><span class="faq__q">How disruptive is a Network Health Check?</span><i aria-hidden="true"></i></summary>
+          <div class="faq__a"><p>The survey itself is non-intrusive and scheduled around the home's routine. Any follow-on work is planned to avoid disrupting care operations, residents or staff shifts — often phased, as it was across the Roche Care Homes sites.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="mono">Network design</span><span class="faq__q">Why should staff and resident WiFi be separated?</span><i aria-hidden="true"></i></summary>
+          <div class="faq__a"><p>Because they have very different needs. On a flat network, care systems, staff devices, residents and guests all share one network with no separation or prioritisation — so a resident's streaming can slow down a care tablet. A segmented network gives each category of device its own logical network, prioritised and secured on its own terms.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="mono">New build</span><span class="faq__q">When should we involve you on a new build?</span><i aria-hidden="true"></i></summary>
+          <div class="faq__a"><p>As early as possible — ideally at design stage. Getting the network right during construction is significantly easier and cheaper than correcting fundamental design problems once the building is operational. We work alongside developers, main contractors, M&amp;E consultants and architects, coordinating with other trades during first fix through to handover.</p></div>
+        </details>
+        <details class="faq__item">
+          <summary><span class="mono">Support</span><span class="faq__q">Do you look after the network once it's live?</span><i aria-hidden="true"></i></summary>
+          <div class="faq__a"><p>Yes. Every network is validated, tested and handed over with accurate documentation, and we offer remote monitoring, network support and ongoing management afterwards — so someone can actually see what's happening on the network before it becomes a problem.</p></div>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- ============ FINAL CTA ============ -->
-  <section class="final-cta">
-    <div class="wrap">
-      <h2>Let's talk about your care home.</h2>
-      <p>Whether you're planning a new building or trying to work out why the WiFi keeps dropping, tell us briefly what's going on and we'll come back to you with next steps.</p>
-      <div class="hero-ctas">
-        <a href="/contact/?type=new-build" class="btn primary">Discuss a care home project</a>
-        <a href="/care-home-wifi-problems/" class="btn secondary">Having WiFi problems?</a>
+  <!-- ============ CTA ============ -->
+  <section class="cta" aria-label="Get in touch">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Let's talk about your care home <i>✦</i> </span><span>Let's talk about your care home <i>✦</i> </span>
+        <span>Let's talk about your care home <i>✦</i> </span><span>Let's talk about your care home <i>✦</i> </span>
+      </div>
+    </div>
+    <div class="wrap cta__row">
+      <p class="cta__lede fade-up">Whether you're planning a new building or trying to work out why the WiFi keeps dropping, tell us briefly what's going on and we'll come back to you with next steps.</p>
+      <div class="cta__btns fade-up">
+        <a href="#contact" class="btn btn--accent" data-magnetic><span>Discuss a care home project</span></a>
+        <a href="#contact" data-type="WiFi problem / health check" class="link-arrow">Having WiFi problems?</a>
       </div>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <span class="eyebrow">Contact</span>
-        <h2 style="margin-bottom:24px; font-size:clamp(1.5rem,2.6vw,2rem);">Send us your project details.</h2>
-        <div class="contact-detail"><span class="label">Telephone</span><div><a href="tel:03304303490">0330 430 3490</a></div></div>
-        <div class="contact-detail"><span class="label">Email</span><div><a href="mailto:hello@carehomewifi.com">hello@carehomewifi.com</a></div></div>
-        <div class="contact-detail"><span class="label">Coverage</span><div>United Kingdom</div></div>
+  <section class="contact" id="contact">
+    <div class="wrap contact__grid">
+      <div class="contact__info">
+        <p class="eyebrow">Contact</p>
+        <h2 class="display" data-split>Send us your <em>project details.</em></h2>
+        <dl class="contact__list">
+          <div><dt class="mono">Telephone</dt><dd><a href="tel:03304303490">0330 430 3490</a></dd></div>
+          <div><dt class="mono">Email</dt><dd><a href="mailto:hello@carehomewifi.com">hello@carehomewifi.com</a></dd></div>
+          <div><dt class="mono">Coverage</dt><dd>United Kingdom</dd></div>
+        </dl>
       </div>
-      <form class="enquiry" aria-label="Project enquiry form">
-        <div class="form-row">
-          <div><label for="name">Name</label><input id="name" name="name" type="text" required></div>
-          <div><label for="company">Company</label><input id="company" name="company" type="text"></div>
+
+      <!-- Delivered by FormSubmit (formsubmit.co) to the Inspire AV commercial team.
+           Recipient is set in data-endpoint; the first live submission sends a one-off
+           activation email to that address, which must be confirmed before mail flows. -->
+      <form class="form" aria-label="Project enquiry form" novalidate
+            data-endpoint="https://formsubmit.co/ajax/jonathan.a@inspire-av.com">
+        <input type="text" name="_honey" class="form__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form__row">
+          <label class="field"><input name="name" type="text" required placeholder=" " autocomplete="name"><span>Name</span></label>
+          <label class="field"><input name="company" type="text" placeholder=" " autocomplete="organization"><span>Company</span></label>
         </div>
-        <div class="form-row">
-          <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
-          <div><label for="phone">Telephone</label><input id="phone" name="phone" type="tel"></div>
+        <div class="form__row">
+          <label class="field"><input name="email" type="email" required placeholder=" " autocomplete="email"><span>Email</span></label>
+          <label class="field"><input name="phone" type="tel" placeholder=" " autocomplete="tel"><span>Telephone</span></label>
         </div>
-        <div class="form-row">
-          <div><label for="carehome">Care home name</label><input id="carehome" name="carehome" type="text"></div>
-          <div><label for="location">Location</label><input id="location" name="location" type="text"></div>
+        <div class="form__row">
+          <label class="field"><input name="carehome" type="text" placeholder=" "><span>Care home name</span></label>
+          <label class="field"><input name="location" type="text" placeholder=" "><span>Location</span></label>
         </div>
-        <div class="form-row">
-          <div><label for="beds">Approx. number of bedrooms</label><input id="beds" name="beds" type="number" min="0"></div>
-          <div>
-            <label for="project-type">Project type</label>
-            <select id="project-type" name="project-type">
-              <option>New build</option>
-              <option>Existing care home</option>
-              <option>WiFi problem</option>
+        <div class="form__row">
+          <label class="field"><input name="beds" type="number" min="0" placeholder=" "><span>Approx. number of bedrooms</span></label>
+          <label class="field field--select">
+            <select name="project-type">
+              <option selected>New build</option>
+              <option>WiFi problem / health check</option>
               <option>Network upgrade</option>
-              <option>WiFi survey</option>
-              <option>Data infrastructure</option>
-              <option>Support</option>
+              <option>WiFi &amp; network design</option>
+              <option>Installation &amp; cabling</option>
+              <option>Managed WiFi &amp; support</option>
               <option>Other</option>
             </select>
-          </div>
+            <span>Project type</span>
+          </label>
         </div>
-        <div><label for="details">Project description</label><textarea id="details" name="details"></textarea></div>
-        <button type="submit" class="btn primary">Send project details</button>
+        <label class="field field--area"><textarea name="details" rows="4" placeholder=" "></textarea><span>Project description</span></label>
+        <div class="form__foot">
+          <p class="form__note" role="status">We'll only use these details to reply to your enquiry.</p>
+          <button type="submit" class="btn btn--dark" data-magnetic><span>Send project details</span></button>
+        </div>
+        <div class="form__done" hidden>
+          <p class="form__done-title">Thank you — <em>we've got it.</em></p>
+          <p>Your enquiry is with our care home networks team. We'll come back to you shortly with next steps. If it's urgent, call <a href="tel:03304303490">0330 430 3490</a>.</p>
+        </div>
       </form>
     </div>
   </section>
 
 </main>
 
-<footer class="site">
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
   <div class="wrap">
-    <div class="footer-top">
-      <div>
-        <img src="assets/logo-reverse.png" alt="CareHomeWiFi.com">
-        <p>Specialist WiFi, network and data infrastructure for UK care homes. Over 7 years' experience, 100+ care homes completed, 3,000+ devices installed and managed.</p>
-        <p style="font-size:0.82rem; color:#6B7178; margin-top:16px;">Part of <a href="https://www.inspire-av.com/" style="border-bottom:1px solid #6B7178;">Inspire Audio Visual</a>, Unit 661c, Thorp Arch Estate, Wetherby, LS23 7FF.</p>
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/logo-reverse.png" alt="CareHomeWiFi.com" loading="lazy" width="2800" height="528">
+        <p>Specialist WiFi, network and data infrastructure for UK care homes.</p>
+        <p class="footer__parent">The commercial care-sector arm of <a href="https://www.inspire-av.com/" target="_blank" rel="noopener">Inspire Audio Visual</a></p>
       </div>
-      <div class="footer-cols">
-        <div>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="/care-home-wifi-design/">WiFi Design</a></li>
-            <li><a href="/care-home-network-design/">Network Design</a></li>
-            <li><a href="/care-home-wifi-installation/">Installation</a></li>
-            <li><a href="/managed-care-home-wifi/">Managed WiFi</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/case-studies/">Projects</a></li>
-            <li><a href="/knowledge/">Knowledge</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/privacy/">Privacy Policy [placeholder]</a></li>
-            <li><a href="/cookies/">Cookie Policy [placeholder]</a></li>
-          </ul>
-        </div>
+      <div class="footer__cols">
+        <div><h4 class="mono">Services</h4><ul>
+          <li><a href="#paths">New build networks</a></li>
+          <li><a href="#health-check">Network health checks</a></li>
+          <li><a href="#services">Design &amp; installation</a></li>
+          <li><a href="#services">Managed WiFi &amp; support</a></li>
+        </ul></div>
+        <div><h4 class="mono">Explore</h4><ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul></div>
+        <div><h4 class="mono">Get in touch</h4><ul>
+          <li><a href="tel:03304303490">0330 430 3490</a></li>
+          <li><a href="mailto:hello@carehomewifi.com">hello@carehomewifi.com</a></li>
+          <li>Unit 661c, Thorp Arch Estate,<br>Wetherby, LS23 7FF</li>
+        </ul></div>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 CareHomeWiFi.com — a trading name of Inspire Audio Visual. <span class="mono" style="opacity:.6;">[COMPANY REGISTRATION NUMBER: INSERT]</span></span>
+
+    <p class="footer__word" aria-hidden="true">CareHome<em>WiFi</em></p>
+
+    <div class="footer__bottom">
+      <span>© 2026 CareHomeWiFi.com — a trading name of Inspire Audio Visual.</span>
       <span>Unit 661c, Thorp Arch Estate, Wetherby, LS23 7FF</span>
+      <button class="to-top mono" type="button">Back to top ↑</button>
     </div>
   </div>
 </footer>
 
-<button class="scroll-top" aria-label="Back to top" title="Back to top">↑</button>
-
-<div class="cookie-banner" role="region" aria-label="Cookie notice">
-  <p>We use essential cookies to run this site, and optional analytics cookies to understand how it's used. See our <a href="/cookies/">Cookie Policy</a> for details.</p>
-  <div class="cookie-actions">
-    <button class="btn cookie-decline" type="button">Decline</button>
-    <button class="btn primary cookie-accept" type="button">Accept</button>
-  </div>
-</div>
-
-<script src="assets/site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
