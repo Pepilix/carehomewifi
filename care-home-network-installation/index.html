@@ -1,0 +1,101 @@
+---
+title: Network installation and infrastructure for care homes
+seo_title: Care Home WiFi Installation & Network Infrastructure
+crumb: Installation & Infrastructure
+crumbs:
+  - { title: Services, url: /services/ }
+description: Care home WiFi installation and network infrastructure — structured cabling, fibre backbone, switching, failover internet and access points, installed, labelled, tested and documented.
+service_type: Care home WiFi installation and network infrastructure
+image: /assets/img/cabinet-rack-install.jpg
+redirect_from:
+  - /care-home-wifi-installation/
+faqs:
+  - q: What equipment do you install?
+    a: Typically the comms cabinet, patching, core and edge switching with PoE, the router and firewall with failover to a backup connection, a fibre backbone where the building needs it, and the wireless access points. We can also install the structured cabling, or work with the site electrician who installs it to our schedule.
+  - q: Which manufacturers do you use?
+    a: We specify equipment to suit the building and the operator's needs. Recent new-build homes on the LNT programme use UniFi WiFi 7 access points on a fibre backbone.
+  - q: How do you test the network before handover?
+    a: Cabling is tested before the active equipment is connected. Once configured, we check coverage and roaming across the building, confirm each network segment behaves as designed, and test failover by taking the primary connection down.
+---
+
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div>
+      <p class="eyebrow">Service</p>
+      <h1>Network installation and infrastructure for care homes.</h1>
+      <p class="lead">The cabling, switching, internet connection and access points that everything else depends on — installed neatly, labelled properly, tested thoroughly and documented so the network can be supported for years.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="{{ '/contact/?type=new-build' | relative_url }}">Discuss a Project</a>
+      </div>
+    </div>
+    <figure class="photo photo--portrait" style="aspect-ratio:4/4.4">
+      <img src="{{ '/assets/img/cabinet-rack-install.jpg' | relative_url }}" width="1050" height="1400" alt="Network cabinet with labelled patch leads, PoE switch, gateway and incoming fibre router">
+    </figure>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What we install</p>
+      <h2>The complete physical network.</h2>
+    </div>
+    <ul class="service-rows">
+      <li><h3>Internet connection &amp; backup</h3><p>Fibre as the primary supply, coordinated with the provider, plus a Starlink or 5G backup connected to a router and firewall that fails over automatically.</p></li>
+      <li><h3>Comms cabinet &amp; core switching</h3><p>Cabinets, patch panels and PoE switching sized for the device count, with power protection and space to grow.</p></li>
+      <li><h3>Fibre backbone</h3><p>Fibre links between the comms room and floor or wing cabinets in larger buildings, so distance never limits performance.</p></li>
+      <li><h3>Structured cabling</h3><p>Data cabling to access points, staff areas and building systems — installed by us or by the site electrician to our schedule, and tested before handover.</p></li>
+      <li><h3>Wireless access points</h3><p>Positioned for coverage and capacity, and placed to look considered in residents' rooms, corridors and lounges.</p></li>
+      <li><h3>Configuration</h3><p>Network segments, security policies, priority for care systems and guest isolation, configured and recorded.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <figure class="photo photo--portrait reveal">
+      <img src="{{ '/assets/img/hero-ap-install.jpg' | relative_url }}" width="1122" height="1402" loading="lazy" alt="Engineer installing a ceiling access point">
+    </figure>
+    <div>
+      <p class="eyebrow">Standards of work</p>
+      <h2>Installed to be supported, not just switched on.</h2>
+      <p class="lead">A network that works on day one but can't be understood on day 500 isn't finished. We install every job as if we'll be the ones supporting it — because often we are.</p>
+      <ul class="list-lined" style="margin-top:var(--s-5)">
+        <li>Every cable and patch lead labelled at both ends</li>
+        <li>Tidy, documented cabinets with power and cooling considered</li>
+        <li>Cable testing before active equipment is connected</li>
+        <li>Coverage, roaming and failover checks before handover</li>
+        <li>As-built records of equipment, configuration and data points</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">How it fits together</p>
+      <h2>From the incoming line to every room.</h2>
+    </div>
+    {% include network-diagram.html %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <div>
+      <p class="eyebrow">On construction sites</p>
+      <h3>Working to the programme</h3>
+      <p class="muted">We coordinate with the main contractor and other trades, install in the windows the programme allows, and keep the on-site phase short by settling the design early. <a class="text-link" href="{{ '/new-build-care-home-networks/' | relative_url }}">New builds</a></p>
+    </div>
+    <div>
+      <p class="eyebrow">In occupied homes</p>
+      <h3>Working around residents</h3>
+      <p class="muted">We phase installation area by area, agree access to residents' rooms with the manager, and keep the existing network running until each new section is tested. <a class="text-link" href="{{ '/care-home-wifi-problems/' | relative_url }}">Existing homes</a></p>
+    </div>
+  </div>
+</section>
+
+{% include faq.html heading="Installation questions" %}
+
+{% include cta-band.html heading="Need the network installed properly?" text="Tell us about the building and the timescale, and we'll scope the installation." label="Discuss a Project" url="/contact/" %}

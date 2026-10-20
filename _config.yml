@@ -1,0 +1,70 @@
+# ---------------------------------------------------------------------------
+# CareHomeWiFi.com — site settings
+# Built by GitHub Pages (Jekyll). Edit contact details and the form
+# destination here; every page picks them up.
+# ---------------------------------------------------------------------------
+
+title: CareHomeWiFi.com
+tagline: Specialist WiFi & network infrastructure for UK care homes
+description: >-
+  Specialist WiFi and network infrastructure for UK care homes — new-build
+  developments, upgrades to existing homes and ongoing support. Part of
+  Inspire Audio Visual.
+url: "https://carehomewifi.com"
+baseurl: ""
+lang: en-GB
+locale: en_GB
+
+# Contact details shown across the site
+phone: "0330 430 3490"
+phone_link: "+443304303490"
+email: "hello@carehomewifi.com"
+address:
+  line1: "Unit 661c, Thorp Arch Estate"
+  town: "Wetherby"
+  postcode: "LS23 7FF"
+parent:
+  name: "Inspire Audio Visual"
+  url: "https://www.inspire-av.com/"
+
+# Enquiry forms post here (FormSubmit). The first submission from the live
+# domain sends an activation email to this address, which must be confirmed.
+form_endpoint: "https://formsubmit.co/ajax/jonathan.a@inspire-av.com"
+
+google_site_verification: "rpIIRBk_5GeOTAxsVPoGxJIO_kPPLuaqXh_SiOBkx3s"
+
+# While true, unconfirmed facts are highlighted on the page with a dashed
+# "Confirm" marker. Set to false only once CONTENT-CHECKLIST.md is complete.
+show_confirm_markers: true
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  insights:
+    output: true
+    permalink: /insights/:name/
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+  - scope: { path: "", type: insights }
+    values: { layout: insight }
+
+permalink: pretty
+future: true
+markdown: kramdown
+kramdown:
+  auto_ids: true
+
+exclude:
+  - README.md
+  - CONTENT-CHECKLIST.md
+  - tools/
+  - .github/

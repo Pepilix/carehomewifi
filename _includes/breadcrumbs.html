@@ -1,0 +1,7 @@
+<nav class="breadcrumbs container" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {% for c in page.crumbs %}<li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>{% endfor %}
+    <li aria-current="page">{{ page.crumb | default: page.title }}</li>
+  </ol>
+</nav>

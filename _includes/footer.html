@@ -1,0 +1,58 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <img src="{{ '/assets/img/logo-reverse.png' | relative_url }}" alt="CareHomeWiFi.com" width="2800" height="528" loading="lazy">
+        <p>Specialist WiFi and network infrastructure for UK care homes — from new-build specification to long-term support.</p>
+        <p class="site-footer__parent">Part of <a href="{{ site.parent.url }}" rel="noopener">{{ site.parent.name }}</a></p>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Who we help</h2>
+        <ul>
+          <li><a href="{{ '/new-build-care-home-networks/' | relative_url }}">New-build developments</a></li>
+          <li><a href="{{ '/care-home-wifi-problems/' | relative_url }}">Existing care homes</a></li>
+          <li><a href="{{ '/contact/?type=portfolio' | relative_url }}">Multi-site care groups</a></li>
+          <li><a href="{{ '/care-technology-integration/' | relative_url }}">Care technology providers</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Services</h2>
+        <ul>
+          <li><a href="{{ '/care-home-wifi-survey/' | relative_url }}">WiFi surveys &amp; network design</a></li>
+          <li><a href="{{ '/care-home-network-installation/' | relative_url }}">Installation &amp; infrastructure</a></li>
+          <li><a href="{{ '/managed-care-home-wifi/' | relative_url }}">Managed WiFi &amp; support</a></li>
+          <li><a href="{{ '/services/' | relative_url }}">All services</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Company</h2>
+        <ul>
+          <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/insights/' | relative_url }}">Insights</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Contact</h2>
+        <ul>
+          <li><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><address>{{ site.address.line1 }}<br>{{ site.address.town }}, {{ site.address.postcode }}</address></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__legal">
+      <p>© {{ site.time | date: "%Y" }} CareHomeWiFi.com is a trading name of {{ site.parent.name }}. <mark class="confirm" data-note="Legal entity name, company number and registered office">[Confirm: registered company name, company number and registered office]</mark></p>
+      <ul>
+        <li><a href="{{ '/privacy/' | relative_url }}">Privacy notice</a></li>
+        <li><a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

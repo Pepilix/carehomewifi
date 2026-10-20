@@ -1,0 +1,84 @@
+{%- assign page_title = page.seo_title | default: page.title -%}
+{%- if page.url == "/" -%}{%- assign full_title = page_title -%}{%- else -%}{%- assign full_title = page_title | append: " | CareHomeWiFi.com" -%}{%- endif -%}
+{%- assign page_desc = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 -%}
+{%- assign page_image = page.image | default: "/assets/img/case-lnt-exterior.jpg" | absolute_url -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className += ' js';</script>
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ page_desc }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+<meta name="google-site-verification" content="{{ site.google_site_verification }}">
+<meta name="theme-color" content="#172B3A">
+
+<meta property="og:type" content="{% if page.collection == 'insights' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_desc }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ page_image }}">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preload" href="{{ '/assets/fonts/manrope-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/inter-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "{{ '/#organisation' | absolute_url }}",
+  "name": "CareHomeWiFi.com",
+  "url": "{{ '/' | absolute_url }}",
+  "logo": "{{ '/assets/img/logo-horizontal.png' | absolute_url }}",
+  "image": "{{ '/assets/img/case-lnt-exterior.jpg' | absolute_url }}",
+  "description": "{{ site.description | normalize_whitespace }}",
+  "telephone": "{{ site.phone }}",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.line1 }}",
+    "addressLocality": "{{ site.address.town }}",
+    "postalCode": "{{ site.address.postcode }}",
+    "addressCountry": "GB"
+  },
+  "areaServed": { "@type": "Country", "name": "United Kingdom" },
+  "parentOrganization": { "@type": "Organization", "name": "{{ site.parent.name }}", "url": "{{ site.parent.url }}" }
+}
+</script>
+{% if page.url != "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" }
+    {%- assign pos = 1 -%}
+    {%- for c in page.crumbs -%}{%- assign pos = pos | plus: 1 -%}
+    ,{ "@type": "ListItem", "position": {{ pos }}, "name": "{{ c.title }}", "item": "{{ c.url | absolute_url }}" }
+    {%- endfor -%}
+    {%- assign pos = pos | plus: 1 -%}
+    ,{ "@type": "ListItem", "position": {{ pos }}, "name": "{{ page.crumb | default: page.title }}", "item": "{{ page.url | absolute_url }}" }
+  ]
+}
+</script>
+{% endif %}
+{% if page.service_type %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": {{ page.service_type | jsonify }},
+  "name": {{ page.title | jsonify }},
+  "description": {{ page_desc | jsonify }},
+  "url": "{{ page.url | absolute_url }}",
+  "provider": { "@id": "{{ '/#organisation' | absolute_url }}" },
+  "areaServed": { "@type": "Country", "name": "United Kingdom" },
+  "audience": { "@type": "Audience", "audienceType": "Care home developers, operators and owners" }
+}
+</script>
+{% endif %}
+{% if page.schema %}<script type="application/ld+json">{{ page.schema }}</script>{% endif %}

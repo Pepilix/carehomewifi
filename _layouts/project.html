@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{%- comment -%}
+  Case study template. Front matter fields:
+  title, client, sector, location, summary, image, image_alt, order,
+  facts: [{label, value}], quote: {text, name, role}, gallery: [{src, alt}],
+  cta_type (enquiry type for the closing button), cta_label
+{%- endcomment -%}
+<article>
+  <header class="page-hero">
+    <div class="container page-hero__grid">
+      <div>
+        <p class="eyebrow">Case study · {{ page.sector }}</p>
+        <h1>{{ page.title }}</h1>
+        <p class="lead">{{ page.summary }}</p>
+        <dl class="facts" style="margin-top:var(--s-6)">
+          <div><dt>Client</dt><dd>{{ page.client }}</dd></div>
+          <div><dt>Location</dt><dd>{{ page.location }}</dd></div>
+        </dl>
+      </div>
+      <figure class="photo"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" width="1024" height="683"></figure>
+    </div>
+  </header>
+
+  {% if page.facts %}
+  <section class="section--tight section--white" aria-label="Project facts">
+    <div class="container">
+      <dl class="facts facts--3">
+        {% for f in page.facts %}<div><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>{% endfor %}
+      </dl>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="section">
+    <div class="container article-layout">
+      <div class="prose">
+        {{ content }}
+        {% if page.quote %}
+        <blockquote class="quote" style="margin-top:var(--s-7)">
+          <p>“{{ page.quote.text }}”</p>
+          <footer><strong>{{ page.quote.name }}</strong>{{ page.quote.role }}{% if page.quote.confirm %} <mark class="confirm">permission to publish</mark>{% endif %}</footer>
+        </blockquote>
+        {% endif %}
+      </div>
+      <aside class="article-aside">
+        <div class="aside-box">
+          <h2>Planning something similar?</h2>
+          <p class="muted">Tell us about your building and timescales and we'll suggest next steps.</p>
+          <a class="btn btn--primary" href="{{ '/contact/?type=' | append: page.cta_type | relative_url }}">{{ page.cta_label | default: "Discuss a Project" }}</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {% if page.gallery %}
+  <section class="section section--white" aria-label="Project photographs">
+    <div class="container grid-2">
+      {% for g in page.gallery %}
+      <figure class="photo photo--landscape"><img src="{{ g.src | relative_url }}" alt="{{ g.alt }}" loading="lazy"></figure>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="section">
+    <div class="container">
+      <h2>More projects</h2>
+      <ul class="article-list" style="margin-top:var(--s-5)">
+        {% assign others = site.projects | sort: "order" %}
+        {% for p in others %}{% unless p.url == page.url %}
+        <li><a href="{{ p.url | relative_url }}"><span class="meta">{{ p.sector }}</span><div><h3>{{ p.title }}</h3><p>{{ p.summary }}</p></div></a></li>
+        {% endunless %}{% endfor %}
+        <li><a href="{{ '/projects/' | relative_url }}"><span class="meta">All</span><div><h3>View all projects</h3></div></a></li>
+      </ul>
+    </div>
+  </section>
+</article>

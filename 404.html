@@ -1,36 +1,21 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page not found | CareHomeWiFi.com</title>
-<meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/main.css">
-<style>
-  .nf { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; padding: 32px 0; }
-  .nf__logo { width: 200px; margin-left: -8px; }
-  .nf__code { font-family: var(--serif); font-size: clamp(7rem, 22vw, 18rem); line-height: .8; letter-spacing: -.03em; color: var(--accent); }
-  .nf h1 { margin: 24px 0 18px; }
-  .nf p { max-width: 50ch; color: var(--ink-2); font-size: 1.05rem; }
-  .nf__ctas { display: flex; gap: 28px; align-items: center; margin-top: 36px; flex-wrap: wrap; }
-</style>
-</head>
-<body>
-<main class="nf wrap">
-  <a href="/" aria-label="CareHomeWiFi.com home"><img class="nf__logo" src="/assets/logo-horizontal.png" alt="CareHomeWiFi.com"></a>
-  <div>
-    <p class="nf__code" aria-hidden="true">404</p>
-    <h1 class="display">That page has <em>dropped out.</em></h1>
-    <p>Much like a poorly-positioned access point, this page isn't reachable from where you're standing. It may have moved, or the link might be out of date.</p>
-    <div class="nf__ctas">
-      <a href="/" class="btn btn--dark"><span>Back to the homepage</span></a>
-      <a href="/#contact" class="link-arrow">Get in touch</a>
-    </div>
+---
+title: Page not found
+permalink: /404.html
+noindex: true
+sitemap: false
+---
+
+<section class="page-hero page-hero--text">
+  <div class="container">
+    <p class="eyebrow">Error 404</p>
+    <h1>We can't find that page.</h1>
+    <p class="lead">It may have moved, or the link may be out of date. These are the most useful places to go next:</p>
+    <ul class="list-lined" style="max-width:560px; margin-top:var(--s-5)">
+      <li><a href="{{ '/' | relative_url }}">Homepage</a></li>
+      <li><a href="{{ '/new-build-care-home-networks/' | relative_url }}">New-build care homes</a></li>
+      <li><a href="{{ '/care-home-wifi-problems/' | relative_url }}">Help for existing care homes</a></li>
+      <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}">Contact us</a></li>
+    </ul>
   </div>
-  <p class="mono">CareHomeWiFi.com — the commercial care-sector arm of Inspire Audio Visual</p>
-</main>
-</body>
-</html>
+</section>

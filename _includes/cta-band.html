@@ -1,0 +1,16 @@
+{%- comment -%}
+  Closing call to action. Usage:
+  {% include cta-band.html heading="..." text="..." label="..." url="/contact/?type=new-build" %}
+{%- endcomment -%}
+<section class="cta-band">
+  <div class="container cta-band__inner">
+    <div>
+      <h2>{{ include.heading }}</h2>
+      {% if include.text %}<p>{{ include.text }}</p>{% endif %}
+    </div>
+    <div class="cta-band__actions">
+      <a class="btn btn--light" href="{{ include.url | default: '/contact/' | relative_url }}">{{ include.label | default: "Discuss a Project" }}</a>
+      <a class="cta-band__phone" href="tel:{{ site.phone_link }}">or call {{ site.phone }}</a>
+    </div>
+  </div>
+</section>

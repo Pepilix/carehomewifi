@@ -1,0 +1,56 @@
+<!-- How a care home network is put together. Built in HTML/CSS so it stays
+     readable at every screen size and to screen readers. -->
+<figure class="netdiagram" aria-labelledby="netdiagram-caption">
+  <div class="netdiagram__wan">
+    <div class="netnode netnode--backup">
+      <span class="netnode__tag">Backup option</span>
+      <strong>Starlink</strong>
+      <span>Satellite broadband</span>
+    </div>
+    <div class="netnode netnode--primary">
+      <span class="netnode__tag">Primary</span>
+      <strong>Fibre incoming line</strong>
+      <span>Leased line or full-fibre broadband</span>
+    </div>
+    <div class="netnode netnode--backup">
+      <span class="netnode__tag">Backup option</span>
+      <strong>5G</strong>
+      <span>Mobile broadband</span>
+    </div>
+  </div>
+
+  <div class="netdiagram__links" aria-hidden="true">
+    <svg viewBox="0 0 900 70" preserveAspectRatio="none">
+      <path class="link link--backup" d="M150 0 V20 Q150 35 165 35 H435 Q450 35 450 50 V70"/>
+      <path class="link link--primary" d="M450 0 V70"/>
+      <path class="link link--backup" d="M750 0 V20 Q750 35 735 35 H465 Q450 35 450 50 V70"/>
+    </svg>
+  </div>
+
+  <div class="netnode netnode--router">
+    <strong>Router &amp; firewall</strong>
+    <span>Automatic failover — if the fibre drops, traffic moves to the backup connection</span>
+  </div>
+
+  <div class="netdiagram__stem" aria-hidden="true"></div>
+
+  <div class="netnode netnode--core">
+    <strong>Core switching</strong>
+    <span>Fibre backbone to each floor · segmented, secured network</span>
+  </div>
+
+  <div class="netdiagram__stem" aria-hidden="true"></div>
+
+  <ul class="netdiagram__segments" aria-label="Separate network segments">
+    <li><b>01</b>Care &amp; operations</li>
+    <li><b>02</b>Staff devices</li>
+    <li><b>03</b>Residents</li>
+    <li><b>04</b>Guests &amp; visitors</li>
+    <li><b>05</b>Building systems</li>
+    <li><b>06</b>Security &amp; access</li>
+    <li><b>07</b>Voice &amp; nurse call</li>
+    <li><b>08</b>Entertainment &amp; TV</li>
+  </ul>
+
+  <figcaption id="netdiagram-caption">Fibre is the primary connection. A Starlink or 5G backup takes over automatically if the fibre fails. Behind the firewall, each category of device sits on its own network segment, prioritised and secured separately.</figcaption>
+</figure>

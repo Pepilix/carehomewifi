@@ -1,0 +1,29 @@
+---
+title: Insights
+seo_title: Care Home WiFi & Network Insights
+crumb: Insights
+description: Practical guidance on care home WiFi and network infrastructure — design, troubleshooting, network segmentation and what new-build care homes need.
+redirect_from:
+  - /knowledge/
+---
+
+<section class="page-hero page-hero--text" style="padding-bottom:var(--s-7)">
+  <div class="container">
+    <p class="eyebrow">Insights</p>
+    <h1>Practical guidance on care home networks.</h1>
+    <p class="lead">Plain-English answers to the questions we're asked most by developers, care home managers and IT teams.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <ul class="article-list">
+      {% assign items = site.insights | sort: "date" | reverse %}
+      {% for a in items %}
+      <li><a href="{{ a.url | relative_url }}"><span class="meta">{{ a.topic }}</span><div><h2 style="font-size:var(--fs-h3); margin:0 0 .3em">{{ a.title }}</h2><p>{{ a.description }}</p></div></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include cta-band.html heading="Have a question we haven't answered?" label="Get in touch" url="/contact/" %}

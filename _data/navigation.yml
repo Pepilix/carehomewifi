@@ -1,0 +1,30 @@
+# Primary navigation — used by the header, mobile menu and footer.
+main:
+  - title: New Builds
+    url: /new-build-care-home-networks/
+  - title: Existing Homes
+    url: /care-home-wifi-problems/
+  - title: Services
+    url: /services/
+    children:
+      - title: WiFi Surveys & Network Design
+        url: /care-home-wifi-survey/
+        text: Measured surveys and network designs for new and existing buildings.
+      - title: Network Installation & Infrastructure
+        url: /care-home-network-installation/
+        text: Cabling, fibre backbone, switching, access points and commissioning.
+      - title: Managed WiFi & Support
+        url: /managed-care-home-wifi/
+        text: Monitoring, troubleshooting and support once the network is live.
+  - title: Technology & Integration
+    url: /care-technology-integration/
+  - title: Projects
+    url: /projects/
+  - title: About
+    url: /about/
+  - title: Insights
+    url: /insights/
+
+cta:
+  title: Discuss a Project
+  url: /contact/

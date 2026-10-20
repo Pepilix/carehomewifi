@@ -1,0 +1,49 @@
+---
+title: Contact us
+seo_title: Contact CareHomeWiFi.com — Discuss a Care Home Network Project
+crumb: Contact
+description: Discuss a new-build care home network, request a WiFi assessment for an existing home or talk to us about your care home portfolio. Call 0330 430 3490.
+---
+
+<section class="page-hero page-hero--text" style="padding-bottom:var(--s-7)">
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h1>Discuss a project or get help with your network.</h1>
+    <p class="lead">Use the form, call or email — whichever is easiest. A few lines is enough to get started.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container split split--top">
+    {% include enquiry-form.html %}
+    <div>
+      <ul class="contact-list">
+        <li><span>Telephone</span><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></li>
+        <li><span>Email</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><span>Office</span><address>{{ site.address.line1 }}<br>{{ site.address.town }}, {{ site.address.postcode }}</address></li>
+        <li><span>Coverage</span><strong style="font-family:var(--font-head)">Projects across the UK</strong></li>
+      </ul>
+
+      <h2 style="font-size:var(--fs-h3); margin-top:var(--s-7)">What happens next</h2>
+      <ol class="process process--4" style="grid-template-columns:1fr">
+        <li><h3>We reply</h3><p>A member of the team reads your enquiry and gets back to you <mark class="confirm" data-note="Reply time">within one working day</mark>.</p></li>
+        <li><h3>A short call</h3><p>We talk through the building, the problem or the programme, and what you need from us.</p></li>
+        <li><h3>Next step</h3><p>Usually a WiFi assessment for an existing home, or a specification review for a new build.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Quick routes</p>
+      <h2>Tell us which describes you.</h2>
+    </div>
+    <ul class="service-rows">
+      <li><h3>Building a new care home</h3><p>Developers, construction directors and contractors planning a new home or a programme of homes.</p><a class="text-link" href="?type=new-build#f-type">Discuss a New-Build Project</a></li>
+      <li><h3>Problems in an existing home</h3><p>Owners and managers dealing with unreliable WiFi, dead spots or an ageing network.</p><a class="text-link" href="?type=existing#f-type">Request a WiFi Assessment</a></li>
+      <li><h3>Running several homes</h3><p>Care groups looking to standardise, upgrade or support networks across their estate.</p><a class="text-link" href="?type=portfolio#f-type">Discuss Your Care Home Portfolio</a></li>
+    </ul>
+  </div>
+</section>

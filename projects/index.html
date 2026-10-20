@@ -1,0 +1,41 @@
+---
+title: Care home network projects
+seo_title: Care Home WiFi & Network Projects
+crumb: Projects
+description: Case studies of care home WiFi and network projects — new-build programmes for LNT Care Developments and upgrades to operational homes for Roche Care Homes.
+redirect_from:
+  - /case-studies/
+---
+
+<section class="page-hero page-hero--text">
+  <div class="container">
+    <p class="eyebrow">Projects</p>
+    <h1>Care home network projects.</h1>
+    <p class="lead">A selection of our work in new-build developments and operational care homes — what each client needed, what we did, how it was delivered and what it achieved.</p>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container grid-2">
+    {% assign projects = site.projects | sort: "order" %}
+    {% for p in projects %}
+    <a class="project-card" href="{{ p.url | relative_url }}">
+      <figure class="photo"><img src="{{ p.image | relative_url }}" alt="{{ p.image_alt }}" loading="lazy" width="1024" height="683"></figure>
+      <div class="project-card__body">
+        <span class="project-card__meta">{{ p.sector }} · {{ p.location }}</span>
+        <h2 style="font-size:var(--fs-h3); margin:0">{{ p.title }}</h2>
+        <p>{{ p.summary }}</p>
+        <span class="text-link">Read the case study</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="photo-placeholder" style="min-height:180px"><div><strong>More case studies to follow</strong>Add approved projects as Markdown files in the <code>_projects</code> folder — see README.md</div></div>
+  </div>
+</section>
+
+{% include cta-band.html heading="Have a project in mind?" label="Discuss a Project" url="/contact/" %}

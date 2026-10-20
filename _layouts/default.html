@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+{% include head.html %}
+</head>
+<body class="{{ page.body_class }}{% unless site.show_confirm_markers %} hide-confirm{% endunless %}">
+<a href="#main" class="skip-link">Skip to content</a>
+{% include header.html %}
+<main id="main">
+  {% if page.url != "/" %}{% include breadcrumbs.html %}{% endif %}
+  {{ content }}
+</main>
+{% include footer.html %}
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+</body>
+</html>
