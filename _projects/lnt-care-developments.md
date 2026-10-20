@@ -54,4 +54,6 @@ At Bradshaw Lodge that meant 28 access points and more than 150 data points cove
 
 Each new LNT home opens with a complete, tested network built to the same standard as the last. The specification doesn't have to be re-argued on every project, installation fits neatly into the construction programme, and the homes are consistent to support afterwards.
 
+LNT homes also use Sensio's AI-assisted monitoring in residents' rooms, which runs on the network we install. That's one reason in-room coverage is planned room by room rather than from the corridors.
+
 

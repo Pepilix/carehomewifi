@@ -21,11 +21,11 @@ Technology & Integration, Managed WiFi & Support, Contact, About and Privacy.
 
 ## 2. Clients, testimonials and partners
 
-- [ ] **Roche Care Homes** — permission to publish Patrick Roche's quote and the Roche logo (home, Roche case study, About).
-- [ ] **LNT Care Developments** — permission to name LNT, use the logo, show Bradshaw Lodge photos and publish programme figures.
-- [ ] **Bradshaw Lodge** — town/location to add to the case study (the old site had a `[LOCATION]` placeholder).
-- [ ] **"CPS"** — which company and product? There's no UK care software called CPS. Did you mean **Person Centred Software (PCS)**? (Home, Technology & Integration.)
-- [ ] **Sensio** — confirm we can name them as a provider we've worked alongside. The copy states no partnership.
+- [x] **Roche Care Homes** — permission confirmed for Patrick Roche's quote and the Roche logo (20 Oct 2026).
+- [x] **LNT Care Developments** — permission confirmed to name LNT, use the logo, show Bradshaw Lodge photos and publish programme figures (20 Oct 2026). The figures themselves still need confirming in section 1.
+- [ ] **Bradshaw Lodge** — town/location to add to the case study.
+- [x] **"CPS"** — confirmed as **Person Centred Software**. Now named on the homepage, Technology & Integration and in the network explorer.
+- [x] **Sensio** — confirmed: Sensio's monitoring is used in LNT care homes, on the networks we install. Worded that way on the homepage, Technology & Integration, the explorer and the LNT case study. No partnership is claimed.
 
 ## 3. Company and legal
 

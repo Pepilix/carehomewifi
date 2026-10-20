@@ -80,7 +80,7 @@ layers:
         tag: Care segment
         name: Care management systems
         parents: [segments]
-        summary: Digital care planning and records, used on devices throughout the home.
+        summary: Digital care planning and records, such as Person Centred Software, used on devices throughout the home.
         technical:
           - Needs reliable coverage wherever care is recorded, including residents' rooms.
           - Access to the supplier's cloud service is allowed through the firewall; requirements are taken from the supplier in writing.
@@ -90,7 +90,7 @@ layers:
         tag: Monitoring segment
         name: AI-assisted monitoring
         parents: [segments]
-        summary: Sensor-based monitoring in residents' rooms, from providers such as Sensio.
+        summary: Sensor-based monitoring in residents' rooms, such as the Sensio system used in LNT care homes.
         technical:
           - In-room sensors depend on consistent coverage inside bedrooms, often through closed fire doors.
           - Devices sit on their own segment, with only the connections the supplier specifies allowed.
