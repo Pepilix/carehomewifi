@@ -1,0 +1,13 @@
+{%- comment -%}
+  Analytics consent banner. Google Analytics is only loaded after "Accept".
+  Rejecting is as easy as accepting (ICO guidance). Reopened from the footer.
+{%- endcomment -%}
+{% if site.ga_measurement_id != "" %}
+<div class="consent" role="region" aria-label="Cookie choices" hidden data-consent>
+  <p class="consent__text">We'd like to use Google Analytics cookies to understand how people use this site, so we can improve it. They're only set if you accept. <a href="{{ '/privacy/' | relative_url }}#cookies">More about cookies</a></p>
+  <div class="consent__actions">
+    <button type="button" class="btn btn--secondary btn--small" data-consent-choice="denied">Reject</button>
+    <button type="button" class="btn btn--primary btn--small" data-consent-choice="granted">Accept analytics</button>
+  </div>
+</div>
+{% endif %}

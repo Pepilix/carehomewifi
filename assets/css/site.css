@@ -738,3 +738,17 @@ mark.confirm::before {
 .evidence__note { margin: 0; color: var(--slate); font-size: var(--fs-sm); max-width: 60ch; }
 .evidence .text-link { align-self: flex-start; }
 @media (max-width: 760px) { .evidence { grid-template-columns: 1fr; } .evidence__media { aspect-ratio: 3 / 2; } }
+
+/* analytics consent banner */
+.consent {
+  position: fixed; left: var(--gutter); right: var(--gutter); bottom: var(--gutter); z-index: 200; max-width: 640px; margin-left: auto;
+  display: grid; gap: var(--s-4); padding: var(--s-5); background: var(--white); color: var(--navy);
+  border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-menu); font-size: var(--fs-sm); line-height: 1.55;
+}
+.consent[hidden] { display: none; }
+.consent__text { margin: 0; }
+.consent__text a { color: var(--teal-ink); }
+.consent__actions { display: flex; gap: var(--s-3); flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 600px) { .consent__actions .btn { flex: 1; width: auto; } }
+.site-footer__link { padding: 0; font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+.site-footer__link:hover { color: var(--white); text-decoration: underline; }

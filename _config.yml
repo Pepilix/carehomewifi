@@ -37,6 +37,10 @@ form_endpoint: "https://formsubmit.co/ajax/jonathan.a@inspire-av.com"
 
 google_site_verification: "rpIIRBk_5GeOTAxsVPoGxJIO_kPPLuaqXh_SiOBkx3s"
 
+# Google Analytics 4. Only loaded after a visitor accepts analytics cookies
+# in the consent banner (UK PECR). Leave empty to switch analytics off.
+ga_measurement_id: "G-WTW1BT43N4"
+
 # While true, unconfirmed facts are highlighted on the page with a dashed
 # "Confirm" marker. Set to false only once CONTENT-CHECKLIST.md is complete.
 show_confirm_markers: false

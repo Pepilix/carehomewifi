@@ -51,6 +51,7 @@
       <p>© {{ site.time | date: "%Y" }} CareHomeWiFi.com is a trading name of {{ site.parent.legal_name }}, registered in England and Wales, company number {{ site.parent.company_number }}. Registered office: {{ site.parent.registered_office }}.</p>
       <ul>
         <li><a href="{{ '/privacy/' | relative_url }}">Privacy notice</a></li>
+        {% if site.ga_measurement_id != "" %}<li><button type="button" class="site-footer__link" data-consent-open>Cookie settings</button></li>{% endif %}
       </ul>
     </div>
   </div>

@@ -393,6 +393,7 @@
         })
         .then(function () {
           form.classList.add('is-sent');
+          if (window.gtag) window.gtag('event', 'generate_lead', { enquiry_type: typeSel.value, page_path: location.pathname });
           var done = $('.enquiry__done', form);
           done.hidden = false;
           done.focus();
@@ -405,4 +406,58 @@
         });
     });
   });
+
+  /* ======================================================================
+     Analytics consent (UK PECR): Google Analytics loads only after Accept
+     ====================================================================== */
+  (function () {
+    var GA = document.body.getAttribute('data-ga');
+    var banner = $('[data-consent]');
+    if (!GA || !banner) return;
+    var KEY = 'chw-analytics-consent';
+    var read = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+    var save = function (v) { try { localStorage.setItem(KEY, v); } catch (e) { /* storage blocked */ } };
+
+    var loadGA = function () {
+      if (window.__chwGA) return;
+      window.__chwGA = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA);
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA);
+      document.head.appendChild(s);
+    };
+    var clearGACookies = function () {
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (/^_ga/.test(name)) {
+          ['', '.' + location.hostname, location.hostname].forEach(function (d) {
+            document.cookie = name + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : '');
+          });
+        }
+      });
+    };
+    var show = function () { banner.hidden = false; };
+    var hide = function () { banner.hidden = true; };
+
+    $$('[data-consent-choice]', banner).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var v = btn.getAttribute('data-consent-choice');
+        save(v);
+        hide();
+        if (v === 'granted') loadGA();
+        else { clearGACookies(); if (window.__chwGA) location.reload(); }
+      });
+    });
+    $$('[data-consent-open]').forEach(function (b) {
+      b.addEventListener('click', function () { show(); $('[data-consent-choice="denied"]', banner).focus(); });
+    });
+
+    var choice = read();
+    if (choice === 'granted') loadGA();
+    else if (choice !== 'denied') show();
+  })();
 })();
