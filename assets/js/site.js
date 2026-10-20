@@ -395,7 +395,8 @@
         .catch(function () {
           button.disabled = false;
           button.textContent = 'Send enquiry';
-          status.innerHTML = 'Sorry — your enquiry didn’t send. Please call <a href="tel:+443304303490">0330 430 3490</a> or email <a href="mailto:hello@carehomewifi.com">hello@carehomewifi.com</a>.';
+          var em = form.dataset.fallbackEmail, ph = form.dataset.fallbackPhone, tel = form.dataset.fallbackTel;
+          status.innerHTML = 'Sorry — your enquiry didn’t send. Please call <a href="tel:' + tel + '">' + ph + '</a> or email <a href="mailto:' + em + '">' + em + '</a>.';
         });
     });
   });

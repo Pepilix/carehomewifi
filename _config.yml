@@ -18,12 +18,18 @@ locale: en_GB
 # Contact details shown across the site
 phone: "0330 430 3490"
 phone_link: "+443304303490"
-email: "hello@carehomewifi.com"
+# Email shown across the site. Switch back to "hello@carehomewifi.com" once that
+# mailbox or forward exists: carehomewifi.com had no mail server at launch, so
+# mail to hello@ bounced.
+email: "jonathan.a@inspire-av.com"
 address:
   line1: "Unit 661c, Thorp Arch Estate"
   town: "Wetherby"
   postcode: "LS23 7FF"
 parent:
+  legal_name: "Inspire Audio Visual Ltd"
+  company_number: "08332115"
+  registered_office: "Unit 661c, Street 3, Thorp Arch Estate, Wetherby, LS23 7FF"
   name: "Inspire Audio Visual"
   url: "https://www.inspire-av.com/"
 

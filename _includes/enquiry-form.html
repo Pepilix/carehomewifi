@@ -4,7 +4,7 @@
   A ?type= query string on the page URL overrides it (handled in site.js).
 {%- endcomment -%}
 {%- assign preset = include.type | default: "" -%}
-<form class="enquiry" action="{{ site.form_endpoint }}" method="post" novalidate data-enquiry>
+<form class="enquiry" action="{{ site.form_endpoint }}" method="post" novalidate data-enquiry data-fallback-email="{{ site.email }}" data-fallback-phone="{{ site.phone }}" data-fallback-tel="{{ site.phone_link }}">
   <input type="text" name="_honey" class="enquiry__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
   <div class="enquiry__errors" tabindex="-1" hidden></div>
 

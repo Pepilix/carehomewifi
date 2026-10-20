@@ -46,7 +46,7 @@
     "addressCountry": "GB"
   },
   "areaServed": { "@type": "Country", "name": "United Kingdom" },
-  "parentOrganization": { "@type": "Organization", "name": "{{ site.parent.name }}", "url": "{{ site.parent.url }}" }
+  "parentOrganization": { "@type": "Organization", "name": "{{ site.parent.name }}", "legalName": "{{ site.parent.legal_name }}", "url": "{{ site.parent.url }}", "identifier": { "@type": "PropertyValue", "propertyID": "Companies House number", "value": "{{ site.parent.company_number }}" } }
 }
 </script>
 {% if page.url != "/" %}

@@ -29,20 +29,21 @@ Technology & Integration, Managed WiFi & Support, Contact, About and Privacy.
 
 ## 3. Company and legal
 
-- [ ] Registered company name, company number and registered office for Inspire Audio Visual (site footer, Privacy notice).
-- [ ] ICO registration number (Privacy notice).
-- [ ] Email provider used for enquiries, and the enquiry retention period (Privacy notice).
-- [ ] Have the Privacy notice reviewed against Inspire AV's data protection arrangements.
-- [ ] Is **hello@carehomewifi.com** monitored? It's shown throughout the site. Form enquiries go to jonathan.a@inspire-av.com.
-- [ ] Accreditations and insurance to list (About), or remove those two rows.
+- [x] Registered company: Inspire Audio Visual Ltd, 08332115, Unit 661c, Street 3, Thorp Arch Estate, Wetherby, LS23 7FF. Now in the footer, Privacy notice and structured data.
+- [ ] **ICO fee:** Inspire AV isn't on the ICO register. Run the ICO's 3-minute self-assessment (ico.org.uk/for-organisations/data-protection-fee/self-assessment). If a fee is due, it's £52 a year for most small firms (tier 1). Once registered, send the ZA… number to add to the Privacy notice.
+- [x] Email provider: Microsoft 365 (from inspire-av.com's mail records). Now named in the Privacy notice.
+- [ ] **Retention period:** decide how long enquiries that don't lead to work are kept. 24 months is a common, defensible choice. The notice currently says "only as long as we need them".
+- [ ] **Privacy notice review:** have whoever handles Inspire AV's data protection read `/privacy/` against the ICO's checklist (ico.org.uk/for-organisations/advice-for-small-organisations/privacy-notices-and-cookies).
+- [ ] **hello@carehomewifi.com:** carehomewifi.com had no mail server at launch, so mail to hello@ bounced. The site shows jonathan.a@inspire-av.com until a mailbox or forward is set up; then change `email:` in `_config.yml` back to hello@carehomewifi.com.
+- [x] Accreditations: SafeContractor approved; insured for construction-site and care-home work (About).
 
 ## 4. Service details
 
-- [ ] Support hours, response times and on-site attendance (Managed WiFi & Support).
-- [ ] Reply-time promise on the Contact page ("within one working day").
-- [ ] Cable test certification format provided at handover (New Builds).
-- [ ] Survey output format: heatmaps, coverage plans or written report (Surveys & Design).
-- [ ] About page: a short company history — when the care division started, how the LNT relationship began, team size.
+- [x] Support: office 8:30am–5:30pm, 24/7 out-of-hours support line, on-site attendance on request (Managed WiFi & Support). No response-time promise is stated.
+- [x] Reply time: same working day (Contact).
+- [x] Fluke-certified cable test results handed over at first fix (New Builds, timeline).
+- [x] Survey output: coverage heatmaps in the initial design, plus a site test after installation (Surveys & Design, timeline).
+- [x] Company history added to About (started 2021 via LNT's owner). Team size not given, so not stated.
 
 ## 5. Photography wanted
 
@@ -61,4 +62,4 @@ The site uses only real project photos. Placeholders are marked **Photo to follo
 
 - [ ] Activate FormSubmit: send one test enquiry from the live domain, then Jonathan clicks the confirmation email.
 - [ ] Add the Google TXT record at GoDaddy (Search Console Domain property), then submit `https://carehomewifi.com/sitemap.xml` in Search Console.
-- [ ] Tick **Enforce HTTPS** in the repository's Settings → Pages.
+- [x] **Enforce HTTPS**, switched on via the GitHub API at the second launch (20 Oct 2026).

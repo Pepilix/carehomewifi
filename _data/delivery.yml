@@ -10,6 +10,7 @@ stages:
       - Recommend the internet connection and, where appropriate, a backup option
     deliverables:
       - Network specification and equipment schedule
+      - Coverage heatmaps from the wireless design
       - Data point layout and schedule
       - Comms room, cabinet, power and cooling requirements
     involved: Developer and design team, or the home's manager and operator
@@ -35,7 +36,7 @@ stages:
       - Work phased area by area in occupied homes
     deliverables:
       - Installed infrastructure with every cable and patch lead labelled
-      - Cable test results
+      - Fluke-certified cable test results, handed over at first fix
     involved: Our engineers, with the site electrician where they install the cabling
   - id: commission
     name: Commission
