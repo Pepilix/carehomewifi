@@ -1,6 +1,6 @@
 ---
 title: How should WiFi be designed for a care home?
-description: The principles behind a reliable care home WiFi design — coverage into every room, capacity for real device numbers, roaming, segmentation and a resilient internet connection.
+description: "The principles behind reliable care home WiFi: coverage into every room, capacity for real device numbers, roaming, segmentation and a resilient connection."
 topic: Design
 date: 2026-10-20
 crumb: How should care home WiFi be designed?

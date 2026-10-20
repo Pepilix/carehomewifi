@@ -1,7 +1,7 @@
 ---
 title: LNT Care Developments — a repeatable new-build network standard
-seo_title: LNT Care Developments new-build care home networks — case study
-description: How we deliver a standard WiFi and data network across LNT Care Developments' new-build care homes, including Bradshaw Lodge — 66 bedrooms, 28 access points, live in a day.
+seo_title: LNT Care Developments Case Study
+description: "The standard WiFi and data network we install across LNT's new-build care homes, including Bradshaw Lodge: 66 bedrooms, 28 access points, live in a day."
 crumb: LNT Care Developments
 crumbs:
   - { title: Projects, url: /projects/ }

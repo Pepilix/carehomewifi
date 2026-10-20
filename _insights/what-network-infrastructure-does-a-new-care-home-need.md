@@ -1,6 +1,7 @@
 ---
+seo_title: What Network Does a New Care Home Need?
 title: What network infrastructure does a new care home need?
-description: A checklist for developers and contractors — the internet connection, comms room, backbone, cabling, WiFi and segmentation a new-build care home needs, and when to plan each.
+description: "A checklist for developers and contractors: the internet connection, comms room, backbone, cabling, WiFi and segmentation a new care home needs."
 topic: New build
 date: 2026-10-20
 crumb: What does a new care home need?

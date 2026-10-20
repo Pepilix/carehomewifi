@@ -105,12 +105,14 @@ strong, b { font-weight: 600; }
 
 /* editorial section heading: label column + heading column */
 .section-head { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: var(--s-4) var(--s-6); margin-bottom: var(--s-7); align-items: baseline; }
+.section-head .eyebrow { margin: 0; padding-top: .55em; }
 .section-head h2 { max-width: 24ch; margin: 0; }
-.section-head p { grid-column: 2; max-width: 62ch; color: var(--slate); font-size: var(--fs-lead); margin: var(--s-3) 0 0; }
-.section--navy .section-head p { color: rgba(247, 246, 242, .78); }
+.section-head > p:not(.eyebrow) { grid-column: 2; max-width: 62ch; color: var(--slate); font-size: var(--fs-lead); margin: var(--s-3) 0 0; }
+.section--navy .section-head > p:not(.eyebrow) { color: rgba(247, 246, 242, .78); }
 @media (max-width: 860px) {
   .section-head { grid-template-columns: 1fr; }
-  .section-head p { grid-column: 1; }
+  .section-head .eyebrow { padding-top: 0; }
+  .section-head > p:not(.eyebrow) { grid-column: 1; }
 }
 
 /* ---------- 4. Components ---------- */
@@ -130,6 +132,7 @@ strong, b { font-weight: 600; }
   min-height: 48px; padding: .7em 1.4em; border-radius: var(--radius); border: 1px solid transparent;
   font-family: var(--font-head); font-weight: 650; font-size: var(--fs-sm); letter-spacing: .01em;
   text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s;
+  white-space: nowrap;
 }
 .btn--primary { background: var(--teal); color: var(--white); }
 .btn--primary:hover { background: var(--teal-ink); }
@@ -140,6 +143,11 @@ strong, b { font-weight: 600; }
 .btn--small { min-height: 40px; padding: .5em 1.1em; }
 .btn--block { width: 100%; }
 .btn-row { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-6); }
+@media (max-width: 600px) {
+  .btn { white-space: normal; text-align: center; }
+  .btn-row .btn { width: 100%; }
+  .journey--portfolio { grid-template-columns: 1fr !important; }
+}
 
 .text-link {
   font-family: var(--font-head); font-weight: 650; font-size: var(--fs-sm); color: var(--teal-ink);

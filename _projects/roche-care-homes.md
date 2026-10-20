@@ -1,7 +1,7 @@
 ---
 title: Roche Care Homes — WiFi & network upgrade
-seo_title: Roche Care Homes WiFi and network upgrade — case study
-description: A phased WiFi and network upgrade across Roche Care Homes in Yorkshire, covering private rooms, communal areas and outdoor spaces, with staff training and a 12-month on-site support warranty.
+seo_title: Roche Care Homes WiFi Upgrade Case Study
+description: A phased WiFi and network upgrade across Roche Care Homes in Yorkshire, with staff training and a 12-month on-site support warranty.
 crumb: Roche Care Homes
 crumbs:
   - { title: Projects, url: /projects/ }

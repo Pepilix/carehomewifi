@@ -1,4 +1,5 @@
 ---
+seo_title: Staff WiFi vs Resident WiFi in Care Homes
 title: "Staff WiFi vs resident WiFi: why should they be separated?"
 description: Why care systems, staff devices, residents and guests should each have their own network — and what segmentation means in practice for a care home.
 topic: Network design
