@@ -1,8 +1,13 @@
-# Content, photography and facts to confirm before launch
+# Content, photography and facts to confirm
 
-Everything below is highlighted on the preview site with a dashed **Confirm** marker.
-When an item is resolved, edit the text and remove its `<mark class="confirm">` wrapper.
-When the list is complete, set `show_confirm_markers: false` in `_config.yml`.
+**Launched 20 October 2026 with every unconfirmed item removed from the live site.**
+The figures, the CPS mention, support hours, reply-time promise, company number and photo placeholders
+below are *not* on the site. Add each one back once it's confirmed.
+To highlight new unconfirmed text while drafting, wrap it in `<mark class="confirm">` and set
+`show_confirm_markers: true` in `_config.yml` on a branch, never on `main`.
+
+Pages where the original wording lived: homepage stats strip, New Builds facts, LNT case study,
+Technology & Integration, Managed WiFi & Support, Contact, About and Privacy.
 
 ## 1. Figures (must be verified and reconciled)
 

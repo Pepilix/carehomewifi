@@ -35,7 +35,7 @@ google_site_verification: "rpIIRBk_5GeOTAxsVPoGxJIO_kPPLuaqXh_SiOBkx3s"
 
 # While true, unconfirmed facts are highlighted on the page with a dashed
 # "Confirm" marker. Set to false only once CONTENT-CHECKLIST.md is complete.
-show_confirm_markers: true
+show_confirm_markers: false
 
 plugins:
   - jekyll-sitemap

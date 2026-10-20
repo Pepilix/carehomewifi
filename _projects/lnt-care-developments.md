@@ -48,6 +48,4 @@ At Bradshaw Lodge that meant 28 access points and more than 150 data points cove
 
 Each new LNT home opens with a complete, tested network built to the same standard as the last. The specification doesn't have to be re-argued on every project, installation fits neatly into the construction programme, and the homes are consistent to support afterwards.
 
-The programme so far: <mark class="confirm" data-note="LNT programme figures">more than 130 LNT homes delivered, with over 35 further homes scheduled for 2027</mark>.
 
-<div class="photo-placeholder" style="margin-top:2rem"><div><strong>Photo to follow</strong>Comms cabinet or access point installation at an LNT home</div></div>

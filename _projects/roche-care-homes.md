@@ -25,7 +25,6 @@ quote:
   text: "Thanks to all the team for your work in getting this all completed again with minimal disruption to the site. It's much appreciated and all the homes have been very positive about CareHomeWiFi."
   name: Patrick Roche
   role: Development Director, Roche Care Homes
-  confirm: true
 gallery:
   - { src: /assets/img/case-roche-tudor-house.jpg, alt: "Tudor House, Roche Care Homes" }
   - { src: /assets/img/case-roche-secondary.jpg, alt: "Stone-built Roche Care Homes property and grounds" }
