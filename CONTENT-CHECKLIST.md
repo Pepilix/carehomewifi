@@ -48,7 +48,11 @@ The site uses only real project photos. Placeholders are marked **Photo to follo
 - [ ] Team photo, or the Thorp Arch office or workshop (About)
 - [ ] More wanted generally: engineers surveying with equipment, cabling and containment at first fix, completed corridors and lounges showing access points, more completed developments.
 
-## 6. Go-live tasks
+## 6. Branding (after the design is signed off)
+
+- [ ] Logo version for dark backgrounds: the orange "WiFi" in `logo-reverse.png` is hard to read on navy (footer).
+
+## 7. Go-live tasks
 
 - [ ] Activate FormSubmit: send one test enquiry from the live domain, then Jonathan clicks the confirmation email.
 - [ ] Add the Google TXT record at GoDaddy (Search Console Domain property), then submit `https://carehomewifi.com/sitemap.xml` in Search Console.
