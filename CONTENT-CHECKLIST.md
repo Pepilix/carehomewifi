@@ -34,7 +34,7 @@ Technology & Integration, Managed WiFi & Support, Contact, About and Privacy.
 - [x] Email provider: Microsoft 365 (from inspire-av.com's mail records). Now named in the Privacy notice.
 - [ ] **Retention period:** decide how long enquiries that don't lead to work are kept. 24 months is a common, defensible choice. The notice currently says "only as long as we need them".
 - [ ] **Privacy notice review:** have whoever handles Inspire AV's data protection read `/privacy/` against the ICO's checklist (ico.org.uk/for-organisations/advice-for-small-organisations/privacy-notices-and-cookies).
-- [ ] **hello@carehomewifi.com:** carehomewifi.com had no mail server at launch, so mail to hello@ bounced. The site shows jonathan.a@inspire-av.com until a mailbox or forward is set up; then change `email:` in `_config.yml` back to hello@carehomewifi.com.
+- [x] **hello@carehomewifi.com:** live on Titan (via 123 Reg), test email received, SPF in place. The site shows hello@ again (20 Oct 2026). The enquiry form still delivers to jonathan.a@inspire-av.com.
 - [x] Accreditations: SafeContractor approved; CSCS-carded engineers; insured for construction-site and care-home work (About).
 
 ## 4. Service details

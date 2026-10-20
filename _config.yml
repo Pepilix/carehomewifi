@@ -18,10 +18,8 @@ locale: en_GB
 # Contact details shown across the site
 phone: "0330 430 3490"
 phone_link: "+443304303490"
-# Email shown across the site. Switch back to "hello@carehomewifi.com" once that
-# mailbox or forward exists: carehomewifi.com had no mail server at launch, so
-# mail to hello@ bounced.
-email: "jonathan.a@inspire-av.com"
+# Email shown across the site (hello@ is hosted on Titan; tested 20 Oct 2026).
+email: "hello@carehomewifi.com"
 address:
   line1: "Unit 661c, Thorp Arch Estate"
   town: "Wetherby"
