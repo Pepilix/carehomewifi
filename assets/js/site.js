@@ -398,7 +398,8 @@
           done.hidden = false;
           done.focus();
         })
-        .catch(function () {
+        .catch(function (err) {
+          if (window.console) console.warn('Enquiry not sent:', err && err.message);
           button.disabled = false;
           button.textContent = 'Send enquiry';
           var em = form.dataset.fallbackEmail, ph = form.dataset.fallbackPhone, tel = form.dataset.fallbackTel;

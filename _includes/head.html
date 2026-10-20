@@ -39,7 +39,10 @@
 <meta name="twitter:image:alt" content="{{ og_alt }}">
 
 <!-- Icons (paths set in _config.yml → brand) -->
-{% if site.brand.favicon_ico != "" %}<link rel="icon" href="{{ site.brand.favicon_ico | relative_url }}" sizes="32x32">
+{% if site.brand.favicon_ico != "" %}<link rel="icon" href="{{ site.brand.favicon_ico | relative_url }}" sizes="16x16 32x32 48x48">
+{% endif %}{% if site.brand.favicon_png %}<link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon-48x48.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
 {% endif %}{% if site.brand.favicon_svg != "" %}<link rel="icon" href="{{ site.brand.favicon_svg | relative_url }}" type="image/svg+xml">
 {% endif %}{% if site.brand.apple_touch_icon != "" %}<link rel="apple-touch-icon" href="{{ site.brand.apple_touch_icon | relative_url }}">
 {% endif %}{% if site.brand.icon_192 != "" %}<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
@@ -60,7 +63,7 @@
   "legalName": "{{ site.parent.legal_name }}",
   "identifier": { "@type": "PropertyValue", "propertyID": "Companies House company number", "value": "{{ site.parent.company_number }}" },
   "url": "{{ '/' | absolute_url }}",
-  "logo": "{{ site.brand.logo | absolute_url }}",
+  "logo": "{{ site.brand.logo_schema | default: site.brand.logo | absolute_url }}",
   "image": "{{ site.brand.og_image | absolute_url }}",
   "description": "{{ site.description | normalize_whitespace }}",
   "telephone": "{{ site.phone }}",
