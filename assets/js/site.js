@@ -460,4 +460,18 @@
     if (choice === 'granted') loadGA();
     else if (choice !== 'denied') show();
   })();
+
+  /* ======================================================================
+     Conversion events for phone and email links (sent only when Google
+     Analytics has been loaded, i.e. after the visitor accepted cookies)
+     ====================================================================== */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a || typeof window.gtag !== 'function') return;
+    var isPhone = a.getAttribute('href').indexOf('tel:') === 0;
+    window.gtag('event', isPhone ? 'phone_click' : 'email_click', {
+      link_url: a.getAttribute('href'),
+      page_path: location.pathname
+    });
+  });
 })();

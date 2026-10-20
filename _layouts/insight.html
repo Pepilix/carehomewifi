@@ -14,7 +14,10 @@ layout: default
   </header>
   <section class="section" style="padding-top:0">
     <div class="container article-layout">
-      <div class="prose">{{ content }}</div>
+      <div class="prose">
+        {% if page.answer %}<aside class="answer" aria-label="In short"><p class="answer__label">In short</p><p>{{ page.answer }}</p></aside>{% endif %}
+        {{ content }}
+      </div>
       <aside class="article-aside">
         <div class="aside-box">
           <h2>Need help with this?</h2>

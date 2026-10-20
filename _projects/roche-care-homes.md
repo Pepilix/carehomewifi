@@ -20,7 +20,12 @@ highlights:
 outcome: Reliable coverage across the homes, completed in the client's words "with minimal disruption to the site".
 cta_type: existing
 cta_label: Request a WiFi Assessment
+service_url: /care-home-wifi-problems/
+service_label: WiFi and network upgrades for existing homes
+service2_url: /care-group-networks/
+service2_label: Networks for care groups
 facts:
+  - { label: "Project type", value: "Upgrade of occupied homes" }
   - { label: "Homes", value: "Multiple sites" }
   - { label: "Access points", value: "14" }
   - { label: "Devices managed", value: "22" }

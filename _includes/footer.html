@@ -2,7 +2,7 @@
   <div class="container">
     <div class="site-footer__top">
       <div class="site-footer__brand">
-        <img src="{{ '/assets/img/logo-reverse.png' | relative_url }}" alt="CareHomeWiFi.com" width="2800" height="528" loading="lazy">
+        <img src="{{ site.brand.logo_reverse | relative_url }}" alt="{{ site.brand_name }}" width="{{ site.brand.logo_width }}" height="{{ site.brand.logo_height }}" loading="lazy">
         <p>Specialist WiFi and network infrastructure for UK care homes — from new-build specification to long-term support.</p>
         <p class="site-footer__parent">Part of the <a href="{{ site.parent.url }}" rel="noopener">{{ site.parent.name }}</a></p>
       </div>

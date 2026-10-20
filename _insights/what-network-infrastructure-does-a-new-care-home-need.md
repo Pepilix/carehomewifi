@@ -2,6 +2,7 @@
 seo_title: What Network Does a New Care Home Need?
 title: What network infrastructure does a new care home need?
 description: "A checklist for developers and contractors: the internet connection, comms room, backbone, cabling, WiFi and segmentation a new care home needs."
+answer: "A modern care home needs a fibre internet connection (ideally with a 5G or Starlink backup), a properly sized comms room, core switching with a fibre backbone, structured cabling to a planned data point schedule, WiFi designed room by room, and separate network segments for care systems, staff, residents, guests and building systems. Most of this has to be specified at design stage, before the electrical first fix."
 topic: New build
 date: 2026-10-20
 crumb: What does a new care home need?
@@ -53,6 +54,6 @@ Coverage, roaming and failover testing before handover, as-built records of the 
 
 ## Coordinating it all
 
-Most of these items cross the boundaries between trades: the electrical contractor, the M&amp;E designer, the internet provider, nurse-call and access-control suppliers. Having one specialist responsible for the network — and for coordinating those interfaces — is what keeps it on programme.
+Most of these items cross the boundaries between trades: the electrical contractor, the M&amp;E designer, the internet provider, nurse-call and access-control suppliers. Having [one specialist responsible for the network](/new-build-care-home-networks/) — and for coordinating those interfaces — is what keeps it on programme.
 
 If you're planning a new home or a programme of homes, [talk to us about a new-build project](/contact/?type=new-build).

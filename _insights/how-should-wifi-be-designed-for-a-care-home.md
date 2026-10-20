@@ -1,6 +1,7 @@
 ---
 title: How should WiFi be designed for a care home?
 description: "The principles behind reliable care home WiFi: coverage into every room, capacity for real device numbers, roaming, segmentation and a resilient connection."
+answer: "Care home WiFi should be designed room by room rather than from the corridors, sized for the real number of devices, configured so staff devices roam cleanly between access points, and split into separate networks for care, staff, residents and guests. It needs a solid backbone and a resilient internet connection behind it, and accurate records once it's installed."
 topic: Design
 date: 2026-10-20
 crumb: How should care home WiFi be designed?
@@ -52,4 +53,4 @@ Every design should end with accurate records: what was installed, where, and ho
 
 ## Getting it right first time
 
-The cheapest time to get this right is during design and construction. For a new build, bring a network specialist in before the electrical design is fixed. For an existing home, start with a [survey](/care-home-wifi-survey/) of what's there today.
+The cheapest time to get this right is during design and construction. For a [new build](/new-build-care-home-networks/), bring a network specialist in before the electrical design is fixed. For an existing home, start with a [survey](/care-home-wifi-survey/) of what's there today.

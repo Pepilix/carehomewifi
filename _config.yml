@@ -5,7 +5,30 @@
 # ---------------------------------------------------------------------------
 
 title: CareHomeWiFi.com
+# Business name used in page titles, social cards and structured data.
+brand_name: CareHomeWiFi
 tagline: Specialist WiFi & network infrastructure for UK care homes
+
+# ---------------------------------------------------------------------------
+# Brand assets. Paths are relative to the site root. Replace the files (or
+# update the paths) when the final logo and icons arrive — see BRAND-ASSETS.md.
+# Leave an entry empty ("") to stop it being referenced.
+# ---------------------------------------------------------------------------
+brand:
+  logo: "/assets/img/logo-horizontal.png"          # header, on light backgrounds
+  logo_reverse: "/assets/img/logo-reverse.png"     # footer, on navy
+  logo_width: 400                                  # intrinsic size of the files above
+  logo_height: 75
+  favicon_svg: "/assets/img/favicon.svg"
+  favicon_ico: ""                                  # /favicon.ico (32×32) when supplied
+  apple_touch_icon: ""                             # /apple-touch-icon.png (180×180) when supplied
+  icon_192: ""                                     # /assets/brand/icon-192.png when supplied
+  icon_512: ""                                     # /assets/brand/icon-512.png when supplied
+  # Default image for social shares (Open Graph / X). Ideal: 1200×630 JPG.
+  og_image: "/assets/img/case-lnt-exterior.jpg"
+  og_image_width: 1024
+  og_image_height: 683
+  og_image_alt: "Bradshaw Lodge, a new-build LNT Care Developments care home"
 description: >-
   Specialist WiFi and network infrastructure for UK care homes — new-build
   developments, upgrades to existing homes and ongoing support. Part of
@@ -75,5 +98,6 @@ exclude:
   - README.md
   - CONTENT-CHECKLIST.md
   - SEO-MAP.md
+  - BRAND-ASSETS.md
   - tools/
   - .github/

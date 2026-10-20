@@ -2,6 +2,7 @@
 seo_title: Staff WiFi vs Resident WiFi in Care Homes
 title: "Staff WiFi vs resident WiFi: why should they be separated?"
 description: Why care systems, staff devices, residents and guests should each have their own network — and what segmentation means in practice for a care home.
+answer: "Because care systems, staff devices, residents and guests have very different needs. Separate network segments let care and operational traffic take priority over streaming, stop visitors' devices reaching equipment such as CCTV recorders or door controllers, and make faults easier to trace. A second WiFi name alone isn't enough: the separation has to run through the switching and firewall."
 topic: Network design
 date: 2026-10-20
 crumb: Staff WiFi vs resident WiFi
@@ -44,6 +45,6 @@ Not on its own. A second network name that leads into the same underlying networ
 
 ## Where to start
 
-For a new build, segmentation should be part of the design from the outset. For an existing home it can usually be introduced as part of an upgrade, often reusing much of the existing equipment.
+For a [new build](/new-build-care-home-networks/), segmentation should be part of the design from the outset. For an [existing home](/care-home-wifi-problems/) it can usually be introduced as part of an upgrade, often reusing much of the existing equipment.
 
 If you're not sure how your home's network is set up, a [WiFi assessment](/contact/?type=existing) will tell you — and show what would need to change.

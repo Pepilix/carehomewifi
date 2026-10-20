@@ -20,7 +20,10 @@ highlights:
 outcome: Each new LNT home opens with a complete, tested network built to the same standard as the last.
 cta_type: new-build
 cta_label: Discuss a New-Build Project
+service_url: /new-build-care-home-networks/
+service_label: New-build care home networks
 facts:
+  - { label: "Project type", value: "New-build programme" }
   - { label: "Example home", value: "Bradshaw Lodge" }
   - { label: "Bedrooms", value: "66" }
   - { label: "Access points", value: "28 × UniFi WiFi 7" }

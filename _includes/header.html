@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container site-header__row">
-    <a class="site-header__logo" href="{{ '/' | relative_url }}" aria-label="CareHomeWiFi.com — home">
-      <img src="{{ '/assets/img/logo-horizontal.png' | relative_url }}" alt="CareHomeWiFi.com" width="2800" height="528">
+    <a class="site-header__logo" href="{{ '/' | relative_url }}" aria-label="{{ site.brand_name }} — home">
+      <img src="{{ site.brand.logo | relative_url }}" alt="{{ site.brand_name }}" width="{{ site.brand.logo_width }}" height="{{ site.brand.logo_height }}">
     </a>
 
     <nav class="primary-nav" aria-label="Main">

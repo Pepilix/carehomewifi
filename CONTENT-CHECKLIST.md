@@ -69,3 +69,13 @@ The site uses only real project photos. Placeholders are marked **Photo to follo
 - [ ] **Ask Google to recrawl.** Earlier today, the interim one-page site briefly served `/new-build-care-home-networks/` and `/care-home-wifi-problems/` as "page moved" stubs, and had no `/services/`. All three now return the real pages (200). Once Search Console is verified, use URL Inspection → Request indexing on those three, then resubmit `sitemap.xml`.
 - [ ] **True 301 redirects (optional).** GitHub Pages can't send server-side 301s, so superseded URLs (`/case-studies/`, `/knowledge/…`, `/care-home-network-upgrades/` and others) use instant HTML redirects with a canonical tag and `noindex`. Google treats these as permanent redirects, but some crawlers report them as "moved" pages. For real 301s, put the domain behind Cloudflare (free plan, redirect rules) or move hosting to Netlify (`_redirects` file). Worth doing only if old URLs still carry search traffic or links.
 - [ ] **LNT programme figures and Bradshaw Lodge's town**, as in section 1, would strengthen the case studies further.
+
+## 9. Final SEO review (20 Oct 2026): questions for you
+
+- [ ] **Bradshaw Lodge town** (LNT case study "Location" still reads "Bradshaw Lodge and LNT homes across the UK").
+- [ ] **LNT programme scale:** confirmed number of homes delivered and scheduled. Permission is granted; the figures still need confirming.
+- [ ] **Roche scope:** how many homes were upgraded, and roughly how many bedrooms in total. The case study currently says "multiple sites".
+- [ ] **Roche location detail:** which towns, if Roche are happy for them to be named.
+- [ ] **Team:** names, roles and experience of the engineers or project leads, if you want people shown on the About page (with their permission).
+- [ ] **More approved projects:** each one with client, location, type, scale, scope, constraints and photos. This is the strongest credibility gain available.
+- [ ] **Brand assets:** see BRAND-ASSETS.md for the logo, favicon, app icons and the 1200×630 social image.

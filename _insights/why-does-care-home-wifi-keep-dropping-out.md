@@ -1,6 +1,7 @@
 ---
 title: Why does care home WiFi keep dropping out?
 description: The most common reasons care home WiFi drops out — and why replacing the access points on their own rarely fixes it.
+answer: "Usually several causes together: access points placed for a different layout or fewer devices, poor roaming between access points, overloaded access points or switching, everything sharing one flat network, a single internet line with no backup, and no monitoring. A survey shows which apply, so only what's causing the problem needs to change."
 topic: Troubleshooting
 date: 2026-10-20
 crumb: Why does WiFi keep dropping out?
@@ -44,6 +45,6 @@ Equipment installed at different times by different contractors rarely works wel
 
 ## What to do about it
 
-The fix starts with a survey rather than a shopping list. Measuring coverage, capacity and roaming across the building — and looking at the switching, configuration and internet connection behind it — shows which of these causes apply. You can then keep what works, reconfigure what's poorly set up and replace only what genuinely needs it.
+The fix starts with a [survey](/care-home-wifi-survey/) rather than a shopping list. Measuring coverage, capacity and roaming across the building — and looking at the switching, configuration and internet connection behind it — shows which of these causes apply. You can then keep what works, reconfigure what's poorly set up and replace only what genuinely needs it.
 
 If your home is seeing these problems, [request a WiFi assessment](/contact/?type=existing) and we'll explain what's happening in plain English before recommending anything.
