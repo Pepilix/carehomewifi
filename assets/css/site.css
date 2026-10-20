@@ -706,9 +706,12 @@ mark.confirm::before {
   .tl__panel { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
-  .tl__num { display: none; }
-  .tl__name { font-size: .78rem; }
+  /* Names don't fit five across on a phone: show the stage number, keep the
+     name for screen readers; the open panel shows the stage name as a heading. */
   .tl__tab { padding-left: 0; padding-right: 0; }
+  .tl__num { font-size: .85rem; color: var(--navy); }
+  .tl__tab[aria-selected="true"] .tl__num { color: var(--teal-ink); }
+  .tl__name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }
 
 /* ---------- project showcase ---------- */
