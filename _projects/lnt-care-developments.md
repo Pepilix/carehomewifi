@@ -12,6 +12,12 @@ summary: A single, proven WiFi and data design installed across LNT's new-build 
 image: /assets/img/case-lnt-exterior.jpg
 image_alt: Bradshaw Lodge, a newly completed LNT Care Developments care home
 order: 1
+filters: [new-build, multi-site]
+highlights:
+  - { label: "Example home", value: "Bradshaw Lodge, 66 bedrooms" }
+  - { label: "Wireless", value: "28 × UniFi WiFi 7 access points" }
+  - { label: "On site", value: "2 engineers, 1 working day" }
+outcome: Each new LNT home opens with a complete, tested network built to the same standard as the last.
 cta_type: new-build
 cta_label: Discuss a New-Build Project
 facts:

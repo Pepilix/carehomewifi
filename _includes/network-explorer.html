@@ -1,0 +1,41 @@
+{%- comment -%}
+  Interactive example network. Content lives in _data/network.yml.
+  Without JavaScript every explanation is shown in full below the diagram.
+{%- endcomment -%}
+<div class="nx" data-nx>
+  <div class="nx__stage" data-nx-stage>
+    <svg class="nx__links" aria-hidden="true" focusable="false"></svg>
+    {% for layer in site.data.network.layers %}
+    <div class="nx__layer nx__layer--{{ layer.id }}" role="group" aria-label="{{ layer.label }}">
+      {% for n in layer.nodes %}
+      <button type="button" class="nx__node{% if n.dashed %} nx__node--optional{% endif %}"
+              data-node="{{ n.id }}"{% if n.parents %} data-parents="{{ n.parents | join: ' ' }}"{% endif %}{% if n.dashed %} data-dashed{% endif %}
+              aria-controls="nx-detail-{{ n.id }}" aria-pressed="false">
+        <span class="nx__tag">{{ n.tag }}</span>
+        <span class="nx__name">{{ n.name }}</span>
+      </button>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="nx__panel" data-nx-panel>
+    <div class="nx__detail nx__detail--intro is-active" id="nx-detail-intro">
+      <p class="nx__kicker">Example architecture</p>
+      <h3>Select any part of the network.</h3>
+      <p>Choose a component to see where it sits, the route it takes to the internet, and what matters technically and operationally.</p>
+      <p class="nx__note">Every home is specified individually. Not every installation includes every system or feature shown here.</p>
+    </div>
+    {% for layer in site.data.network.layers %}{% for n in layer.nodes %}
+    <div class="nx__detail" id="nx-detail-{{ n.id }}" tabindex="-1">
+      <p class="nx__kicker">{{ n.tag }}</p>
+      <h3>{{ n.name }}</h3>
+      <p class="nx__summary">{{ n.summary }}</p>
+      <h4>Technical considerations</h4>
+      <ul>{% for t in n.technical %}<li>{{ t }}</li>{% endfor %}</ul>
+      <h4>Operational considerations</h4>
+      <ul>{% for o in n.operational %}<li>{{ o }}</li>{% endfor %}</ul>
+    </div>
+    {% endfor %}{% endfor %}
+  </div>
+</div>

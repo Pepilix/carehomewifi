@@ -6,6 +6,7 @@
 {%- assign preset = include.type | default: "" -%}
 <form class="enquiry" action="{{ site.form_endpoint }}" method="post" novalidate data-enquiry>
   <input type="text" name="_honey" class="enquiry__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <div class="enquiry__errors" tabindex="-1" hidden></div>
 
   <div class="enquiry__fields">
     <div class="field">

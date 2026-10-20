@@ -1,0 +1,140 @@
+# Content for the interactive network explorer (_includes/network-explorer.html).
+# Layers are drawn top to bottom. "parents" are the nodes a node connects up to.
+# This is an EXAMPLE architecture — keep wording conditional ("can", "where specified").
+
+layers:
+  - id: wan
+    label: Internet connections
+    nodes:
+      - id: fibre
+        tag: Primary WAN
+        name: Fibre internet
+        summary: The main connection to the internet, usually a leased line or full-fibre broadband.
+        technical:
+          - A leased line gives dedicated, symmetrical bandwidth with a provider service level; full-fibre broadband costs less but is shared and best-effort.
+          - Sized for the number of devices and the cloud services the home relies on, with headroom for growth.
+          - On new builds, fibre lead times can be long, so the order is placed early in the programme.
+        operational:
+          - Many care records, monitoring and communication systems are cloud-hosted, so this connection is a dependency for day-to-day care, not just for residents' WiFi.
+      - id: backup
+        tag: Secondary WAN · optional
+        name: 5G or Starlink backup
+        dashed: true
+        summary: A second connection on a different physical path, used if the fibre fails.
+        technical:
+          - 5G depends on local signal strength and may need an external antenna; Starlink needs a clear view of the sky and a suitable roof mount.
+          - Backup links usually have less capacity than the fibre, so rules can prioritise care and operational traffic while running on backup.
+        operational:
+          - Whether a home has a backup, which one suits the site, and what it should carry are agreed per project.
+          - Where a backup is specified, failover is tested at commissioning.
+
+  - id: edge
+    label: Edge
+    nodes:
+      - id: firewall
+        tag: Edge
+        name: Router & firewall
+        parents: [fibre, backup]
+        summary: Connects the building to the internet and enforces the security rules between networks.
+        technical:
+          - Terminates the internet connections and, where a backup is fitted, monitors the primary link and switches over when configured to do so.
+          - Applies the rules that decide which network segments can reach each other and the internet.
+          - Provides secure remote access for management, rather than exposing devices directly to the internet.
+        operational:
+          - One place where security policy is applied and logged, which makes changes and fault-finding quicker.
+
+  - id: core
+    label: Core
+    nodes:
+      - id: core
+        tag: Core
+        name: Core switching & fibre backbone
+        parents: [firewall]
+        summary: The comms room switching, with fibre links out to cabinets on each floor or wing.
+        technical:
+          - Fibre uplinks between the comms room and floor or wing cabinets in larger buildings, so distance doesn't limit performance.
+          - Edge switches provide Power over Ethernet for access points, cameras and phones, sized with headroom.
+          - Power protection and cooling for the cabinets are considered as part of the design.
+        operational:
+          - Tidy, labelled cabinets and accurate records make faults much quicker to find and fix.
+
+  - id: segments
+    label: Segmentation
+    nodes:
+      - id: segments
+        tag: Segmentation
+        name: Segmented network
+        parents: [core]
+        summary: Separate logical networks for each category of device, sharing the same physical cabling.
+        technical:
+          - Each category sits on its own VLAN, with its own WiFi network name where wireless is used.
+          - Rules between segments are restrictive by default; only the connections a system needs are allowed.
+          - Quality of service can prioritise care and voice traffic over streaming.
+        operational:
+          - A resident streaming a film shouldn't slow down a care tablet, and a visitor's phone shouldn't be able to see the CCTV recorder.
+
+  - id: systems
+    label: Systems on the network
+    nodes:
+      - id: care
+        tag: Care segment
+        name: Care management systems
+        parents: [segments]
+        summary: Digital care planning and records, used on devices throughout the home.
+        technical:
+          - Needs reliable coverage wherever care is recorded, including residents' rooms.
+          - Access to the supplier's cloud service is allowed through the firewall; requirements are taken from the supplier in writing.
+        operational:
+          - The software supplier remains responsible for the system itself. We're responsible for the network it runs on.
+      - id: monitoring
+        tag: Monitoring segment
+        name: AI-assisted monitoring
+        parents: [segments]
+        summary: Sensor-based monitoring in residents' rooms, from providers such as Sensio.
+        technical:
+          - In-room sensors depend on consistent coverage inside bedrooms, often through closed fire doors.
+          - Devices sit on their own segment, with only the connections the supplier specifies allowed.
+          - A stable internet connection matters where alerts are processed in the supplier's cloud platform.
+        operational:
+          - We provide and support the connectivity. Monitoring configuration, alerting and clinical use stay with the technology provider and the home.
+      - id: staff
+        tag: Staff segment
+        name: Staff devices
+        parents: [segments]
+        summary: Tablets, handsets and phones carried around the building all day.
+        technical:
+          - Configured for clean roaming between access points, using fast-roaming standards where the devices support them.
+          - Authenticated separately from residents and guests; voice traffic can be prioritised.
+        operational:
+          - Device management (apps, updates, lost devices) usually sits with the operator or their IT provider; we make sure the network supports it.
+      - id: nursecall
+        tag: Nurse-call segment
+        name: Nurse-call connectivity
+        parents: [segments]
+        summary: Call and alert systems where a dropped connection isn't acceptable.
+        technical:
+          - Some nurse-call systems run on their own wiring or radio; IP-based systems and handset or app integrations depend on the network.
+          - Segment, priority, power and any multicast requirements come from the nurse-call supplier and are agreed before installation.
+        operational:
+          - The nurse-call supplier remains responsible for their system; we coordinate the network side and test it with them.
+      - id: guest
+        tag: Resident & guest segments
+        name: Resident & guest WiFi
+        parents: [segments]
+        summary: Everyday connectivity for residents' video calls, streaming and visitors' devices.
+        technical:
+          - Separate networks for residents and guests, with devices isolated from each other and per-device bandwidth limits where needed.
+          - Coverage planned into residents' rooms, not just corridors, for calls and smart TVs.
+        operational:
+          - Good resident WiFi is one of the most visible things families notice, and keeping it separate protects the care systems.
+      - id: building
+        tag: Building segment
+        name: CCTV & building systems
+        parents: [segments]
+        summary: Cameras, access control, door entry and building management.
+        technical:
+          - Kept on an isolated segment with no access from resident or guest networks.
+          - PoE cameras and recorders are wired, with recording bandwidth kept off the wireless network.
+          - Remote viewing or maintenance access goes through a secure method agreed with the system supplier.
+        operational:
+          - Each building system's supplier remains responsible for their equipment; we provide a secure, documented home for it on the network.

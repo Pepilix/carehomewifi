@@ -16,19 +16,8 @@ redirect_from:
 </section>
 
 <section class="section section--white">
-  <div class="container grid-2">
-    {% assign projects = site.projects | sort: "order" %}
-    {% for p in projects %}
-    <a class="project-card" href="{{ p.url | relative_url }}">
-      <figure class="photo"><img src="{{ p.image | relative_url }}" alt="{{ p.image_alt }}" loading="lazy" width="1024" height="683"></figure>
-      <div class="project-card__body">
-        <span class="project-card__meta">{{ p.sector }} · {{ p.location }}</span>
-        <h2 style="font-size:var(--fs-h3); margin:0">{{ p.title }}</h2>
-        <p>{{ p.summary }}</p>
-        <span class="text-link">Read the case study</span>
-      </div>
-    </a>
-    {% endfor %}
+  <div class="container">
+    {% include project-showcase.html heading_level=2 %}
   </div>
 </section>
 

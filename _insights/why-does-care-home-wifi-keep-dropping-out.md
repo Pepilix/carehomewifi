@@ -36,7 +36,7 @@ When care systems, staff devices, residents, guests and building systems share a
 
 ## 5. A single internet connection with no backup
 
-If the broadband fails, everything that depends on the internet fails with it — cloud-based care records, monitoring alerts and video calls. We recommend fibre as the primary connection with a Starlink or 5G backup that takes over automatically.
+If the broadband fails, everything that depends on the internet fails with it — cloud-based care records, monitoring alerts and video calls. We recommend fibre as the primary connection with a Starlink or 5G backup that can take over automatically where the site suits it.
 
 ## 6. Mixed, ageing hardware and no monitoring
 

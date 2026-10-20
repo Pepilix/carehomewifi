@@ -40,7 +40,7 @@ Wireless is only as good as what sits behind it. That means enough switching and
 
 ## Don't rely on a single internet line
 
-Fibre should be the primary connection, with a Starlink or 5G backup and automatic failover. When cloud-based care records and monitoring depend on the internet, a single line is a single point of failure.
+Fibre should be the primary connection. Where the site suits it, a Starlink or 5G backup with automatic failover adds resilience. When cloud-based care records and monitoring depend on the internet, a single line is a single point of failure.
 
 ## Make it look like it belongs
 

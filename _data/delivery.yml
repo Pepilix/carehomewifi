@@ -1,0 +1,63 @@
+# Content for the interactive delivery timeline (_includes/delivery-timeline.html).
+stages:
+  - id: design
+    name: Design
+    lead: We work out what the building needs before anything is ordered or installed.
+    activities:
+      - Review drawings for a new build, or survey the building for an existing home
+      - Plan access point positions for coverage and capacity, room by room
+      - Design the network architecture and segmentation
+      - Recommend the internet connection and, where appropriate, a backup option
+    deliverables:
+      - Network specification and equipment schedule
+      - Data point layout and schedule
+      - Comms room, cabinet, power and cooling requirements
+    involved: Developer and design team, or the home's manager and operator
+  - id: coordinate
+    name: Coordinate
+    lead: We make sure every trade and supplier knows what the network needs, and when.
+    activities:
+      - Issue the data point schedule to the electrical contractor for first fix
+      - Agree containment routes and comms room space with the design team
+      - Order the incoming line and agree timing and route with the provider
+      - Collect network requirements from nurse-call, CCTV, access-control and care-technology suppliers
+    deliverables:
+      - Agreed responsibilities between trades and suppliers
+      - Visit dates planned against the construction programme or the home's routine
+    involved: Main contractor, electrical contractor, internet provider and system suppliers
+  - id: install
+    name: Install
+    lead: The physical network is installed, labelled and tested.
+    activities:
+      - Structured cabling and fibre backbone, installed by us or by the site electrician to our schedule
+      - Cabinets, core and edge switching, router and firewall
+      - Wireless access points positioned for coverage and placed to suit the interior
+      - Work phased area by area in occupied homes
+    deliverables:
+      - Installed infrastructure with every cable and patch lead labelled
+      - Cable test results
+    involved: Our engineers, with the site electrician where they install the cabling
+  - id: commission
+    name: Commission
+    lead: The network is configured, tested and handed over with proper records.
+    activities:
+      - Configure segmentation, security rules and priority for care systems
+      - Check coverage and roaming across the building
+      - Test failover where a backup connection is specified
+      - Test connectivity with system suppliers before their systems go live
+    deliverables:
+      - As-built records of equipment, configuration and data points
+      - Handover walkthrough for the operator's team
+    involved: Our engineers, the operator and system suppliers
+  - id: support
+    name: Support
+    lead: Our involvement can continue once residents move in.
+    activities:
+      - Monitoring of the internet connection, switching and access points
+      - Troubleshooting by engineers who know the building
+      - Firmware and security updates, planned to avoid busy periods
+      - Adding new devices and care systems to the right network segment
+    deliverables:
+      - Support terms agreed in writing
+      - Documentation kept up to date as the network changes
+    involved: Our support team and the home's manager or IT contact

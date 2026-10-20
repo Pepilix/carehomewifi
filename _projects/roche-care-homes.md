@@ -12,6 +12,12 @@ summary: A survey-led upgrade across several operational homes, rolled out in ph
 image: /assets/img/case-roche-tudor-house.jpg
 image_alt: Tudor House, a Roche Care Homes property in Yorkshire
 order: 2
+filters: [existing, multi-site]
+highlights:
+  - { label: "Homes", value: "Multiple operational sites" }
+  - { label: "Access points", value: "14, cloud-managed" }
+  - { label: "Support", value: "12-month on-site warranty" }
+outcome: Reliable coverage across the homes, completed in the client's words "with minimal disruption to the site".
 cta_type: existing
 cta_label: Request a WiFi Assessment
 facts:
