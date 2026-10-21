@@ -13,7 +13,7 @@ When adding content, put it on the page whose intent it serves and link to it fr
 | Surveys & Design | `/care-home-wifi-survey/` | care home WiFi survey; care home network design | coverage heatmaps; diagnostic survey | Owners, IT teams, design teams | Request a WiFi Assessment |
 | Installation | `/care-home-network-installation/` | care home WiFi installation; network cabling and infrastructure | fibre backbone; PoE switching; Fluke testing | Contractors, IT teams | Discuss a Project |
 | Managed Support | `/managed-care-home-wifi/` | managed WiFi for care homes; care home network support | monitoring; troubleshooting; out-of-hours | Operators, IT teams | Discuss Support |
-| Technology & Integration | `/care-technology-integration/` | care home technology connectivity | Sensio; Person Centred Software; nurse call; segmentation | IT directors, technology suppliers | Discuss a Technology Project |
+| Technology & Integration | `/care-technology-integration/` | care home technology connectivity | In-room monitoring; Person Centred Software; nurse call; segmentation | IT directors, technology suppliers | Discuss a Technology Project |
 | Projects | `/projects/` + case studies | care home network case studies | LNT; Roche; Bradshaw Lodge | All — proof | Sector-specific CTA on each case study |
 | Insights | `/insights/…` | informational questions (why WiFi drops out, staff vs resident WiFi, design principles, new-build checklist) | — | Researchers early in the journey | Link to the matching service page |
 

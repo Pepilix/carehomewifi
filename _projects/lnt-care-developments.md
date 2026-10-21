@@ -7,7 +7,7 @@ crumbs:
   - { title: Projects, url: /projects/ }
 client: LNT Care Developments
 sector: New build
-location: Bradshaw Lodge and LNT homes across the UK
+location: Bradshaw Lodge, Otwell Grove and LNT homes across the UK
 summary: A single, proven WiFi and data design installed across LNT's new-build care homes — specified before the building opens, with the active network installed and commissioned in a single day once cabling is complete.
 image: /assets/img/case-lnt-exterior.jpg
 image_alt: Bradshaw Lodge, a newly completed LNT Care Developments care home
@@ -45,20 +45,27 @@ LNT Care Developments builds care homes as a programme, not as one-off projects.
 - Data point schedules and specification for the site electrical contractor
 - UniFi WiFi 7 access points on a fibre backbone, sized so each home gets the most out of its incoming supply
 - Supply, installation, configuration and commissioning of the active network
-- Coordination with LNT's contractors on timing, and with Ripple Solutions, who arrange the incoming line
+- Coordination with LNT's contractors on timing, and with [D&A Procurement](https://daprocurement.co.uk/), who look after the incoming internet line
 
 ## Delivery and constraints
 
 - **Working to the construction programme.** Our visits are timed with LNT's contractors, so the network never holds up handover.
 - **Cabling by the site electrician.** Data points are cabled, terminated and tested by the on-site electrical contractor to our schedule, before we arrive.
-- **Incoming line arranged separately.** Ripple Solutions arrange the incoming line; we coordinate the timing and the route into the building.
+- **Incoming line arranged separately.** D&A Procurement look after the incoming internet line; we coordinate the timing and the route into the building.
 - **A short final stage on site.** Once the cabling is complete, two CareHomeWiFi engineers install and commission the active network — access points, switching, firewall and configuration — in a single working day (around 16 engineer-hours). The one-day figure covers that final stage, not the whole infrastructure.
 
 At Bradshaw Lodge that meant 28 access points and more than 150 data points covering 66 bedrooms, communal areas and staff spaces.
+
+At [Otwell Grove](https://crystalcarecollection.co.uk/care-homes/otwell-grove/) in Bicester, a new home for Crystal Care Collection, the design uses 24 UniFi U7 Pro XG WiFi 7 access points, 12 on each floor, positioned from a predictive coverage plan before installation.
+
+<figure class="plan">
+  <a class="plan__frame" href="{{ '/assets/img/wifi-heatmap-5ghz-first-floor.jpg' | relative_url }}" aria-label="Open full-size image"><img src="{{ '/assets/img/wifi-heatmap-5ghz-first-floor.jpg' | relative_url }}" width="1600" height="1074" loading="lazy" alt="Predicted 5 GHz WiFi coverage heatmap across the first floor of Otwell Grove, with twelve planned access point positions"></a>
+  <figcaption>Otwell Grove, first floor: predicted 5 GHz coverage from the 12 planned access points (FF 01–12). Green shows the strongest signal.</figcaption>
+</figure>
 
 ## Outcomes
 
 - Each new LNT home opens with a complete, tested network built to the same specification as the last, so the design doesn't have to be re-argued on every project.
 - The active network is commissioned in a single working day per home once cabling is complete, which fits neatly into the construction programme.
-- Coverage is planned room by room, which matters because LNT homes use Sensio's AI-assisted monitoring in residents' rooms, running on the network we install.
+- Coverage is planned room by room, so in-room monitoring and care systems work reliably in every resident's room.
 - Every home is configured and documented the same way, which makes them consistent to support afterwards.

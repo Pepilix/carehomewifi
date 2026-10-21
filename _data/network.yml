@@ -90,7 +90,7 @@ layers:
         tag: Monitoring segment
         name: AI-assisted monitoring
         parents: [segments]
-        summary: Sensor-based monitoring in residents' rooms, such as the Sensio system used in LNT care homes.
+        summary: Sensor-based monitoring in residents' rooms, such as the systems used in LNT care homes.
         technical:
           - In-room sensors depend on consistent coverage inside bedrooms, often through closed fire doors.
           - Devices sit on their own segment, with only the connections the supplier specifies allowed.

@@ -25,7 +25,9 @@ Technology & Integration, Managed WiFi & Support, Contact, About and Privacy.
 - [x] **LNT Care Developments** — permission confirmed to name LNT, use the logo, show Bradshaw Lodge photos and publish programme figures (20 Oct 2026). The figures themselves still need confirming in section 1.
 - [ ] **Bradshaw Lodge** — town/location to add to the case study.
 - [x] **"CPS"** — confirmed as **Person Centred Software**. Now named on the homepage, Technology & Integration and in the network explorer.
-- [x] **Sensio** — confirmed: Sensio's monitoring is used in LNT care homes, on the networks we install. Worded that way on the homepage, Technology & Integration, the explorer and the LNT case study. No partnership is claimed.
+- [x] **Sensio** — not named anywhere on the site (owner decision, Oct 2026). Referred to generically as sensor-based / in-room monitoring.
+- [x] **Incoming line** — D&A Procurement (daprocurement.co.uk) look after the incoming internet line for LNT homes (replaced Ripple Solutions).
+- [x] **Otwell Grove** (Bicester, Crystal Care Collection) — 12-12 layout, 24 × UniFi U7 Pro XG. Used as the heatmap example and in the LNT case study.
 
 ## 3. Company and legal
 
