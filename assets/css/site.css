@@ -175,6 +175,10 @@ strong, b { font-weight: 600; }
 .photo--landscape { aspect-ratio: 3 / 2; }
 .photo--portrait { aspect-ratio: 4 / 5; }
 .photo--wide { aspect-ratio: 16 / 9; }
+.plan { margin: var(--s-6) 0 0; }
+.plan__frame { background: #fff; border: var(--border); border-radius: var(--radius); padding: clamp(0.75rem, 2vw, 1.5rem); }
+.plan__frame img { display: block; width: 100%; height: auto; }
+.plan figcaption { font-size: var(--fs-xs); color: var(--slate); margin-top: var(--s-2); max-width: 70ch; }
 .photo figcaption, .caption { font-size: var(--fs-xs); color: var(--slate); margin-top: var(--s-2); }
 
 /* "confirm before publishing" marker */
