@@ -371,6 +371,8 @@ mark.confirm::before {
 .site-footer__brand img { width: 230px; height: auto; max-height: 64px; object-fit: contain; object-position: left center; margin: 0 0 var(--s-4) -8px; }
 .site-footer__brand p { max-width: 36ch; }
 .site-footer__parent a { color: var(--white); border-bottom: 1px solid var(--line-on-navy); }
+.site-footer__family { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; margin-top: .6rem; font-size: var(--fs-sm, .875rem); }
+.site-footer__family a { color: var(--white); border-bottom: 1px solid var(--line-on-navy); }
 .site-footer__heading { font-family: var(--font-head); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--white); margin-bottom: var(--s-4); }
 .site-footer__col ul { list-style: none; display: grid; gap: .55rem; }
 .site-footer__legal { display: flex; justify-content: space-between; gap: var(--s-5); flex-wrap: wrap; margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--line-on-navy); font-size: var(--fs-xs); }
