@@ -57,14 +57,13 @@ parent:
   url: "https://www.inspire-av.com/"
 
 # Sister sites in the Inspire group, linked from the footer.
-# Inspire Electrical points at its test address until inspire-electrical.com is live.
 group_sites:
   - name: "Inspire"
     url: "https://trustinspire.com/"
   - name: "Inspire Audio Visual"
     url: "https://www.inspire-av.com/"
   - name: "Inspire Electrical"
-    url: "https://pepilix.github.io/inspire-electrical/"
+    url: "https://inspire-electrical.com/"
 
 # Enquiry forms post here (FormSubmit). The first submission from the live
 # domain sends an activation email to this address, which must be confirmed.
